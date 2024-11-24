@@ -4,12 +4,12 @@ namespace frontend\models;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use frontend\models\AiLearningVideos;
+use frontend\models\app;
 
 /**
- * AiLearningVideossearch represents the model behind the search form of `frontend\models\AiLearningVideos`.
+ * appsearch represents the model behind the search form of `frontend\models\app`.
  */
-class AiLearningVideossearch extends AiLearningVideos
+class appsearch extends app
 {
     /**
      * {@inheritdoc}
@@ -17,8 +17,8 @@ class AiLearningVideossearch extends AiLearningVideos
     public function rules()
     {
         return [
-            [['Video_ID'], 'integer'],
-            [['Title', 'Instructor', 'Platform', 'Duration', 'Description', 'Video_Link'], 'safe'],
+            [['application_id'], 'integer'],
+            [['name', 'description', 'category', 'industry', 'use_cases'], 'safe'],
         ];
     }
 
@@ -40,7 +40,7 @@ class AiLearningVideossearch extends AiLearningVideos
      */
     public function search($params)
     {
-        $query = AiLearningVideos::find();
+        $query = app::find();
 
         // add conditions that should always apply here
 
@@ -58,15 +58,14 @@ class AiLearningVideossearch extends AiLearningVideos
 
         // grid filtering conditions
         $query->andFilterWhere([
-            'Video_ID' => $this->Video_ID,
+            'application_id' => $this->application_id,
         ]);
 
-        $query->andFilterWhere(['like', 'Title', $this->Title])
-            ->andFilterWhere(['like', 'Instructor', $this->Instructor])
-            ->andFilterWhere(['like', 'Platform', $this->Platform])
-            ->andFilterWhere(['like', 'Duration', $this->Duration])
-            ->andFilterWhere(['like', 'Description', $this->Description])
-            ->andFilterWhere(['like', 'Video_Link', $this->Video_Link]);
+        $query->andFilterWhere(['like', 'name', $this->name])
+            ->andFilterWhere(['like', 'description', $this->description])
+            ->andFilterWhere(['like', 'category', $this->category])
+            ->andFilterWhere(['like', 'industry', $this->industry])
+            ->andFilterWhere(['like', 'use_cases', $this->use_cases]);
 
         return $dataProvider;
     }

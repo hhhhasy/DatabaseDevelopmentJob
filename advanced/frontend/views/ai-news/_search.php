@@ -4,30 +4,32 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model frontend\models\Aivideossearch */
+/* @var $model frontend\models\AiNewssearch */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="aivideos-search">
+<div class="ai-news-search">
 
     <?php $form = ActiveForm::begin([
         'action' => ['index'],
         'method' => 'get',
     ]); ?>
 
-    <?= $form->field($model, 'Video_ID') ?>
+    <?= $form->field($model, 'id') ?>
 
-    <?= $form->field($model, 'Title') ?>
+    <?= $form->field($model, 'title') ?>
 
-    <?= $form->field($model, 'Instructor') ?>
+    <?= $form->field($model, 'content') ?>
 
-    <?= $form->field($model, 'Platform') ?>
+    <?= $form->field($model, 'author') ?>
 
-    <?= $form->field($model, 'Duration') ?>
+    <?= $form->field($model, 'published_at') ?>
 
-    <?php // echo $form->field($model, 'Description') ?>
+    <?php // echo $form->field($model, 'source') ?>
 
-    <?php // echo $form->field($model, 'Video_Link') ?>
+    <?php // echo $form->field($model, 'tags') ?>
+
+    <?php // echo $form->field($model, 'status') ?>
 
     <div class="form-group">
         <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>

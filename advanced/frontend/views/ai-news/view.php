@@ -4,20 +4,20 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
-/* @var $model frontend\models\Aivideos */
+/* @var $model frontend\models\AiNews */
 
-$this->title = $model->Title;
-$this->params['breadcrumbs'][] = ['label' => 'Aivideos', 'url' => ['index']];
+$this->title = $model->title;
+$this->params['breadcrumbs'][] = ['label' => 'Ai News', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>
-<div class="aivideos-view">
+<div class="ai-news-view">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Update', ['update', 'id' => $model->Video_ID], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'id' => $model->Video_ID], [
+        <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Delete', ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
             'data' => [
                 'confirm' => 'Are you sure you want to delete this item?',
@@ -29,13 +29,14 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'Video_ID',
-            'Title',
-            'Instructor',
-            'Platform',
-            'Duration',
-            'Description:ntext',
-            'Video_Link',
+            'id',
+            'title',
+            'content:ntext',
+            'author',
+            'published_at',
+            'source',
+            'tags',
+            'status',
         ],
     ]) ?>
 

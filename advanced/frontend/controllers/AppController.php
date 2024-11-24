@@ -3,16 +3,16 @@
 namespace frontend\controllers;
 
 use Yii;
-use frontend\models\Aitools;
-use frontend\models\Aitoolssearch;
+use frontend\models\app;
+use frontend\models\appsearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * AitoolsController implements the CRUD actions for Aitools model.
+ * AppController implements the CRUD actions for app model.
  */
-class AitoolsController extends Controller
+class AppController extends Controller
 {
     /**
      * {@inheritdoc}
@@ -30,12 +30,12 @@ class AitoolsController extends Controller
     }
 
     /**
-     * Lists all Aitools models.
+     * Lists all app models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new Aitoolssearch();
+        $searchModel = new appsearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -45,7 +45,7 @@ class AitoolsController extends Controller
     }
 
     /**
-     * Displays a single Aitools model.
+     * Displays a single app model.
      * @param integer $id
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
@@ -58,16 +58,16 @@ class AitoolsController extends Controller
     }
 
     /**
-     * Creates a new Aitools model.
+     * Creates a new app model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new Aitools();
+        $model = new app();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->Tool_ID]);
+            return $this->redirect(['view', 'id' => $model->application_id]);
         }
 
         return $this->render('create', [
@@ -76,7 +76,7 @@ class AitoolsController extends Controller
     }
 
     /**
-     * Updates an existing Aitools model.
+     * Updates an existing app model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -87,7 +87,7 @@ class AitoolsController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->Tool_ID]);
+            return $this->redirect(['view', 'id' => $model->application_id]);
         }
 
         return $this->render('update', [
@@ -96,7 +96,7 @@ class AitoolsController extends Controller
     }
 
     /**
-     * Deletes an existing Aitools model.
+     * Deletes an existing app model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -110,15 +110,15 @@ class AitoolsController extends Controller
     }
 
     /**
-     * Finds the Aitools model based on its primary key value.
+     * Finds the app model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Aitools the loaded model
+     * @return app the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Aitools::findOne($id)) !== null) {
+        if (($model = app::findOne($id)) !== null) {
             return $model;
         }
 
