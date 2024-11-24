@@ -24,14 +24,14 @@ AppAsset::register($this);
     
     <?php $this->head() ?>
 
-    <!-- ÒýÈë Google Fonts -->
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
-    <!-- ÄÚÇ¶ CSS ÃÀ»¯ÑùÊ½ -->
+    <!-- CSS å†…åµŒæ ·å¼ -->
     <style>
-        /* Ò³Ãæ±³¾° */
+        /* é¡µé¢èƒŒæ™¯ */
         body {
-            background-image: url('https://img.freepik.com/free-photo/3d-render-abstract-background-with-cyber-particles-design_1048-13836.jpg?t=st=1731904867~exp=1731908467~hmac=61bbc4e4d9500598c59ca39a3f6c97a60a64b23444845512e5887ba044140b76&w=900');
+            background-image: url('');
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -42,9 +42,9 @@ AppAsset::register($this);
             padding: 0;
         }
 
-        /* ¶¥²¿µ¼º½À¸ */
+        /* å¯¼èˆªæ  */
         .navbar-inverse {
-            background: #2c3e50;
+            background: rgba(44, 62, 80, 0.5); /* åŠé€æ˜ŽèƒŒæ™¯ */
             height: 60px;
             padding: 0;
             display: flex;
@@ -54,6 +54,7 @@ AppAsset::register($this);
             top: 0;
             width: 100%;
             z-index: 1000;
+            transition: background 0.3s ease; /* å¹³æ»‘è¿‡æ¸¡æ•ˆæžœ */
         }
 
         .navbar-inverse .navbar-brand {
@@ -63,27 +64,19 @@ AppAsset::register($this);
             font-size: 1.6em;
         }
 
-        .navbar-inverse .navbar-nav {
-            display: flex;
-        }
-
-        .navbar-inverse .navbar-nav > li {
-            margin-left: 15px;
-        }
-
         .navbar-inverse .navbar-nav > li > a {
-            color: #ddd;
+            color: #fff; /* ç™½è‰²æ–‡å­—ï¼Œé€‚é…é€æ˜ŽèƒŒæ™¯ */
             padding: 10px;
             transition: background-color 0.3s ease, color 0.3s ease;
         }
 
         .navbar-inverse .navbar-nav > li > a:hover {
-            background-color: #007bff;
+            background-color: rgba(0, 123, 255, 0.8); /* åŠé€æ˜Žæ‚¬åœæ•ˆæžœ */
             color: #fff;
             border-radius: 5px;
         }
 
-        /* ÄÚÈÝÇøÓò */
+        /* é¡µé¢å†…å®¹ */
         .content-wrapper {
             padding: 20px;
             margin-top: 80px; /* Adjusted for better positioning */
@@ -95,14 +88,14 @@ AppAsset::register($this);
             margin-bottom: 20px;
         }
 
-        /* ÌáÊ¾¿ò */
+        /* æç¤ºæ¡† */
         .alert {
             border-radius: 8px;
             margin-bottom: 20px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        /* Ãæ°üÐ¼µ¼º½ */
+        /* é¢åŒ…å±‘å¯¼èˆª */
         .breadcrumb {
             background-color: #f4f7f6;
             padding: 12px;
@@ -110,7 +103,7 @@ AppAsset::register($this);
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
-        /* Ò³½Å */
+        /* é¡µè„š */
         .footer {
             background-color: #343a40;
             color: #fff;
@@ -147,8 +140,16 @@ AppAsset::register($this);
         ['label' => 'About', 'url' => ['/site/about']],
         ['label' => 'Contact', 'url' => ['/site/contact']],
         ['label' => 'Applications', 'url' => ['/app/index']],
+        [
+            'label' => 'Resource',
+            'items' => [
+                ['label' => 'Tools', 'url' => ['/aitools/index']],
+                ['label' => 'Videos', 'url' => ['/aivideos/index']],
+            ],
+        ],
         ['label' => 'News', 'url' => ['/ainews/index']],
     ];
+    
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
 

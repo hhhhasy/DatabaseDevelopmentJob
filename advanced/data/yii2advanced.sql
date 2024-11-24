@@ -1,17 +1,17 @@
 /*
- Navicat Premium Data Transfer
+ Navicat MySQL Data Transfer
 
- Source Server         : My_database
+ Source Server         : localhost
  Source Server Type    : MySQL
- Source Server Version : 100432
+ Source Server Version : 50726
  Source Host           : localhost:3306
- Source Schema         : yii2
+ Source Schema         : yii2advanced
 
  Target Server Type    : MySQL
- Target Server Version : 100432
+ Target Server Version : 50726
  File Encoding         : 65001
 
- Date: 24/11/2024 18:29:13
+ Date: 24/11/2024 22:48:01
 */
 
 SET NAMES utf8mb4;
@@ -22,7 +22,7 @@ SET FOREIGN_KEY_CHECKS = 0;
 -- ----------------------------
 DROP TABLE IF EXISTS `ai_applications`;
 CREATE TABLE `ai_applications`  (
-  `application_id` int NOT NULL AUTO_INCREMENT,
+  `application_id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
   `category` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
@@ -30,7 +30,7 @@ CREATE TABLE `ai_applications`  (
   `use_cases` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
   `image_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`application_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 11 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 11 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of ai_applications
@@ -51,41 +51,41 @@ INSERT INTO `ai_applications` VALUES (10, '智能制造', 'AI技术在制造业�
 -- ----------------------------
 DROP TABLE IF EXISTS `ai_learning_videos`;
 CREATE TABLE `ai_learning_videos`  (
-  `Video_ID` int NOT NULL AUTO_INCREMENT,
-  `Title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `Instructor` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `Platform` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `Duration` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
-  `Description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
-  `Video_Link` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `Video_ID` int(11) NOT NULL AUTO_INCREMENT,
+  `Title` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `Instructor` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `Platform` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `Duration` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
+  `Description` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL,
+  `Video_Link` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
   PRIMARY KEY (`Video_ID`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 6 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 6 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of ai_learning_videos
 -- ----------------------------
-INSERT INTO `ai_learning_videos` VALUES (1, '深度学习入门 - TensorFlow与Keras', 'Andrew Ng', 'Coursera', '4小时', '本课程由Andrew Ng教授主讲，深入介绍了TensorFlow和Keras在深度学习中的应用，适合初学者。', 'https://www.coursera.org/learn/deep-learning');
-INSERT INTO `ai_learning_videos` VALUES (2, 'PyTorch从入门到精通', 'Yann LeCun', 'YouTube', '5小时', '由PyTorch的创建者Yann LeCun主讲，详细讲解了PyTorch的基本概念和实际应用，适合具有基础知识的学习者。', 'https://www.youtube.com/watch?v=dX3KvwIU4ME');
-INSERT INTO `ai_learning_videos` VALUES (3, '使用GPT-3进行自然语言处理', 'OpenAI Team', 'Udemy', '3小时', '介绍如何利用OpenAI GPT-3进行文本生成和自然语言处理，涵盖API的使用和最佳实践。', 'https://www.udemy.com/course/gpt3-for-nlp/');
-INSERT INTO `ai_learning_videos` VALUES (4, '机器学习基础 - 从零开始学ML', 'Chris Olah', 'YouTube', '6小时', '本视频教程介绍了机器学习的基础概念，适合没有编程经验的初学者，涵盖了线性回归、决策树、SVM等基础算法。', 'https://www.youtube.com/watch?v=ukzFI9rgwfU');
-INSERT INTO `ai_learning_videos` VALUES (5, '深度神经网络与卷积神经网络', 'Fei-Fei Li', 'Stanford Online', '7小时', 'Stanford大学的Fei-Fei Li教授主讲的深度神经网络与卷积神经网络课程，涵盖了计算机视觉和图像处理应用。', 'https://www.youtube.com/watch?v=K0mCuYpDkFY');
+INSERT INTO `ai_learning_videos` VALUES (1, '深度学习入门 - TensorFlow与Keras', 'Andrew Ng', 'Coursera', '4小时', '本课程由Andrew Ng教授主讲，深入介绍了TensorFlow和Keras在深度学习中的应用，适合初学者。', 'https://www.bilibili.com/video/BV1gE411R7jd/?spm_id_from=333.337.search-card.all.click');
+INSERT INTO `ai_learning_videos` VALUES (2, 'PyTorch从入门到精通', 'Yann LeCun', 'YouTube', '5小时', '由PyTorch的创建者Yann LeCun主讲，详细讲解了PyTorch的基本概念和实际应用，适合具有基础知识的学习者。', 'https://www.bilibili.com/video/BV1TN411k7hT/?spm_id_from=333.337.search-card.all.click');
+INSERT INTO `ai_learning_videos` VALUES (3, '使用GPT-3进行自然语言处理', 'OpenAI Team', 'Udemy', '3小时', '介绍如何利用OpenAI GPT-3进行文本生成和自然语言处理，涵盖API的使用和最佳实践。', 'https://www.bilibili.com/video/BV1Xp4y1Y7pQ/?spm_id_from=333.337.search-card.all.click');
+INSERT INTO `ai_learning_videos` VALUES (4, '机器学习基础 - 从零开始学ML', 'Chris Olah', 'YouTube', '6小时', '本视频教程介绍了机器学习的基础概念，适合没有编程经验的初学者，涵盖了线性回归、决策树、SVM等基础算法。', 'https://www.bilibili.com/video/BV1tK4y1D7ms/?spm_id_from=333.337.search-card.all.click');
+INSERT INTO `ai_learning_videos` VALUES (5, '深度神经网络与卷积神经网络', 'Fei-Fei Li', 'Stanford Online', '7小时', 'Stanford大学的Fei-Fei Li教授主讲的深度神经网络与卷积神经网络课程，涵盖了计算机视觉和图像处理应用。', 'https://www.bilibili.com/video/BV1VV411478E/?spm_id_from=333.337.search-card.all.click');
 
 -- ----------------------------
 -- Table structure for ai_news
 -- ----------------------------
 DROP TABLE IF EXISTS `ai_news`;
 CREATE TABLE `ai_news`  (
-  `id` int NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `content` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `author` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
-  `published_at` datetime NULL DEFAULT current_timestamp,
+  `published_at` datetime(0) NULL DEFAULT CURRENT_TIMESTAMP(0),
   `source` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
   `tags` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
   `image_url` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
   `status` enum('draft','published','archived') CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT 'draft',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 20 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = MyISAM AUTO_INCREMENT = 20 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of ai_news
@@ -104,22 +104,26 @@ INSERT INTO `ai_news` VALUES (19, 'AI在游戏行业的深度应用', '游戏开
 -- ----------------------------
 DROP TABLE IF EXISTS `ai_tools`;
 CREATE TABLE `ai_tools`  (
-  `Tool_ID` int NOT NULL AUTO_INCREMENT,
-  `Tool_Name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `Tool_Type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `Description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
-  `Official_Link` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `Tool_ID` int(11) NOT NULL AUTO_INCREMENT,
+  `Tool_Name` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `Tool_Type` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `Description` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL,
+  `Official_Link` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
+  `image_url` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
   PRIMARY KEY (`Tool_ID`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 6 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 9 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of ai_tools
 -- ----------------------------
-INSERT INTO `ai_tools` VALUES (1, 'TensorFlow', '机器学习框架 (ML)', '一个由Google开发的开源机器学习框架，广泛应用于深度学习和神经网络训练。', 'https://www.tensorflow.org');
-INSERT INTO `ai_tools` VALUES (2, 'PyTorch', '机器学习框架 (ML)', '由Facebook开发的深度学习框架，提供灵活性和动态计算图，常用于学术研究和工业应用。', 'https://pytorch.org');
-INSERT INTO `ai_tools` VALUES (3, 'OpenAI GPT-3', '自然语言处理 (NLP)', '由OpenAI开发的一个大规模语言生成模型，擅长文本生成、问答、翻译等任务。', 'https://www.openai.com');
-INSERT INTO `ai_tools` VALUES (4, 'Keras', '机器学习框架 (ML)', '高层神经网络API，使用TensorFlow或Theano作为后端，简化深度学习模型的构建与训练。', 'https://www.keras.io');
-INSERT INTO `ai_tools` VALUES (5, 'Scikit-learn', '机器学习库 (ML)', '一个广泛使用的Python机器学习库，提供常见的机器学习算法实现，适用于数据挖掘和数据分析。', 'https://scikit-learn.org');
+INSERT INTO `ai_tools` VALUES (1, 'TensorFlow', '机器学习框架 (ML)', '一个由Google开发的开源机器学习框架，广泛应用于深度学习和神经网络训练。', 'https://www.tensorflow.org', 'http://127.0.0.1/yii-advanced-app-2.0.32/advanced/frontend/assets/img/Aitools/TensorFlow.jpg');
+INSERT INTO `ai_tools` VALUES (2, 'PyTorch', '机器学习框架 (ML)', '由Facebook开发的深度学习框架，提供灵活性和动态计算图，常用于学术研究和工业应用。', 'https://pytorch.org', 'http://127.0.0.1/yii-advanced-app-2.0.32/advanced/frontend/assets/img/Aitools/PyTorch.jpg');
+INSERT INTO `ai_tools` VALUES (3, 'OpenAI GPT-3', '自然语言处理 (NLP)', '由OpenAI开发的一个大规模语言生成模型，擅长文本生成、问答、翻译等任务。', 'https://www.openai.com', 'http://127.0.0.1/yii-advanced-app-2.0.32/advanced/frontend/assets/img/Aitools/GPT-3.jpg');
+INSERT INTO `ai_tools` VALUES (4, 'Keras', '机器学习框架 (ML)', '高层神经网络API，使用TensorFlow或Theano作为后端，简化深度学习模型的构建与训练。', 'https://www.keras.io', 'http://127.0.0.1/yii-advanced-app-2.0.32/advanced/frontend/assets/img/Aitools/Keras.jpg');
+INSERT INTO `ai_tools` VALUES (5, 'Scikit-learn', '机器学习库 (ML)', '一个广泛使用的Python机器学习库，提供常见的机器学习算法实现，适用于数据挖掘和数据分析。', 'https://scikit-learn.org', 'http://127.0.0.1/yii-advanced-app-2.0.32/advanced/frontend/assets/img/Aitools/Scikit-learn.jpg');
+INSERT INTO `ai_tools` VALUES (6, 'MXNet', '机器学习框架 (ML)', 'Apache MXNet是一个高效的开源深度学习框架，用于分布式和云环境中的灵活和高效的GPU计算。', 'https://mxnet.apache.org/', 'http://127.0.0.1/yii-advanced-app-2.0.32/advanced/frontend/assets/img/Aitools/Apache_MXNet.jpg');
+INSERT INTO `ai_tools` VALUES (7, 'OpenCV', '计算机视觉库 (CV)', 'OpenCV是一个开源的计算机视觉和机器学习软件库，提供了大量的视觉处理和计算功能。', 'https://opencv.org/', 'http://127.0.0.1/yii-advanced-app-2.0.32/advanced/frontend/assets/img/Aitools/cv.jpg');
+INSERT INTO `ai_tools` VALUES (8, 'NumPy', '科学计算库 (SC)', 'NumPy是一个开源的Python科学计算库，用于进行大规模数值和矩阵运算。', 'https://numpy.org/', 'http://127.0.0.1/yii-advanced-app-2.0.32/advanced/frontend/assets/img/Aitools/numpy.jpg');
 
 -- ----------------------------
 -- Table structure for migration
@@ -127,9 +131,9 @@ INSERT INTO `ai_tools` VALUES (5, 'Scikit-learn', '机器学习库 (ML)', '一�
 DROP TABLE IF EXISTS `migration`;
 CREATE TABLE `migration`  (
   `version` varchar(180) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `apply_time` int NULL DEFAULT NULL,
+  `apply_time` int(11) NULL DEFAULT NULL,
   PRIMARY KEY (`version`) USING BTREE
-) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of migration
@@ -144,21 +148,21 @@ INSERT INTO `migration` VALUES ('m241117_142413_Ainews', 1731853544);
 -- ----------------------------
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user`  (
-  `id` int NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `auth_key` varchar(32) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `password_hash` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `password_reset_token` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
   `email` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `status` smallint NOT NULL DEFAULT 10,
-  `created_at` int NOT NULL,
-  `updated_at` int NOT NULL,
+  `status` smallint(6) NOT NULL DEFAULT 10,
+  `created_at` int(11) NOT NULL,
+  `updated_at` int(11) NOT NULL,
   `verification_token` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE,
-  UNIQUE INDEX `username`(`username` ASC) USING BTREE,
-  UNIQUE INDEX `email`(`email` ASC) USING BTREE,
-  UNIQUE INDEX `password_reset_token`(`password_reset_token` ASC) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = DYNAMIC;
+  UNIQUE INDEX `username`(`username`) USING BTREE,
+  UNIQUE INDEX `email`(`email`) USING BTREE,
+  UNIQUE INDEX `password_reset_token`(`password_reset_token`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of user
