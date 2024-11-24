@@ -24,12 +24,12 @@ AppAsset::register($this);
     
     <?php $this->head() ?>
 
-    <!-- ÒýÈë Google Fonts -->
+    <!-- ï¿½ï¿½ï¿½ï¿½ Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
-    <!-- ÄÚÇ¶ CSS ÃÀ»¯ÑùÊ½ -->
+    <!-- ï¿½ï¿½Ç¶ CSS ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ -->
     <style>
-        /* Ò³Ãæ±³¾° */
+        /* Ò³ï¿½æ±³ï¿½ï¿½ */
         body {
             background-image: url('https://img.freepik.com/free-photo/3d-render-abstract-background-with-cyber-particles-design_1048-13836.jpg?t=st=1731904867~exp=1731908467~hmac=61bbc4e4d9500598c59ca39a3f6c97a60a64b23444845512e5887ba044140b76&w=900');
             background-size: cover;
@@ -42,7 +42,7 @@ AppAsset::register($this);
             padding: 0;
         }
 
-        /* ¶¥²¿µ¼º½À¸ */
+        /* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */
         .navbar-inverse {
             background: #2c3e50;
             height: 60px;
@@ -83,7 +83,7 @@ AppAsset::register($this);
             border-radius: 5px;
         }
 
-        /* ÄÚÈÝÇøÓò */
+        /* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */
         .content-wrapper {
             padding: 20px;
             margin-top: 80px; /* Adjusted for better positioning */
@@ -95,14 +95,14 @@ AppAsset::register($this);
             margin-bottom: 20px;
         }
 
-        /* ÌáÊ¾¿ò */
+        /* ï¿½ï¿½Ê¾ï¿½ï¿½ */
         .alert {
             border-radius: 8px;
             margin-bottom: 20px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        /* Ãæ°üÐ¼µ¼º½ */
+        /* ï¿½ï¿½ï¿½Ð¼ï¿½ï¿½ï¿½ï¿½ */
         .breadcrumb {
             background-color: #f4f7f6;
             padding: 12px;
@@ -110,7 +110,7 @@ AppAsset::register($this);
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
-        /* Ò³½Å */
+        /* Ò³ï¿½ï¿½ */
         .footer {
             background-color: #343a40;
             color: #fff;
@@ -143,11 +143,20 @@ AppAsset::register($this);
         ],
     ]);
     $menuItems = [
-        ['label' => 'Home', 'url' => ['/site/index']],
-        ['label' => 'About', 'url' => ['/site/about']],
-        ['label' => 'Contact', 'url' => ['/site/contact']],
-        ['label' => 'News', 'url' => ['/ainews/index']],
-    ];
+    ['label' => 'Home', 'url' => ['/site/index']],
+    ['label' => 'About', 'url' => ['/site/about']],
+    ['label' => 'Contact', 'url' => ['/site/contact']],
+    [
+        'label' => 'Resource',
+        
+        'items' => [
+            ['label' => 'Aivideos', 'url' => ['/aivideos/index']],
+            ['label' => 'Aitools', 'url' => ['/aitools/index']],
+        ],
+    ],
+    ['label' => 'News', 'url' => ['/ainews/index']],
+     ];
+
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
 

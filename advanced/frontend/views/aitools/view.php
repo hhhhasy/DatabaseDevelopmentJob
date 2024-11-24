@@ -4,20 +4,20 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
-/* @var $model frontend\models\AiNews */
+/* @var $model frontend\models\Aitools */
 
-$this->title = $model->title;
-$this->params['breadcrumbs'][] = ['label' => 'Ai News', 'url' => ['index']];
+$this->title = $model->Tool_ID;
+$this->params['breadcrumbs'][] = ['label' => 'Aitools', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>
-<div class="ai-news-view">
+<div class="aitools-view">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'id' => $model->id], [
+        <?= Html::a('Update', ['update', 'id' => $model->Tool_ID], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Delete', ['delete', 'id' => $model->Tool_ID], [
             'class' => 'btn btn-danger',
             'data' => [
                 'confirm' => 'Are you sure you want to delete this item?',
@@ -29,14 +29,12 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'id',
-            'title',
-            'content:ntext',
-            'author',
-            'published_at',
-            'source',
-            'tags',
-            'status',
+            'Tool_ID',
+            'Tool_Name',
+            'Tool_Type',
+            'Description:ntext',
+            'Official_Link',
+            'image_url:url',
         ],
     ]) ?>
 

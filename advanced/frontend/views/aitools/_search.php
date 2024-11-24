@@ -4,32 +4,28 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model frontend\models\AiNewssearch */
+/* @var $model frontend\models\Aitoolssearch */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="ai-news-search">
+<div class="aitools-search">
 
     <?php $form = ActiveForm::begin([
         'action' => ['index'],
         'method' => 'get',
     ]); ?>
 
-    <?= $form->field($model, 'id') ?>
+    <?= $form->field($model, 'Tool_ID') ?>
 
-    <?= $form->field($model, 'title') ?>
+    <?= $form->field($model, 'Tool_Name') ?>
 
-    <?= $form->field($model, 'content') ?>
+    <?= $form->field($model, 'Tool_Type') ?>
 
-    <?= $form->field($model, 'author') ?>
+    <?= $form->field($model, 'Description') ?>
 
-    <?= $form->field($model, 'published_at') ?>
+    <?= $form->field($model, 'Official_Link') ?>
 
-    <?php // echo $form->field($model, 'source') ?>
-
-    <?php // echo $form->field($model, 'tags') ?>
-
-    <?php // echo $form->field($model, 'status') ?>
+    <?php // echo $form->field($model, 'image_url') ?>
 
     <div class="form-group">
         <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>
