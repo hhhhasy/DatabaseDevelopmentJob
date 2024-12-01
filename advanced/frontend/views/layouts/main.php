@@ -148,6 +148,7 @@ AppAsset::register($this);
             ],
         ],
         ['label' => 'News', 'url' => ['/ainews/index']],
+        ['label' => 'Technology', 'url' => ['/aitechnology/index']]
     ];
     
     if (Yii::$app->user->isGuest) {
