@@ -3,16 +3,16 @@
 namespace frontend\controllers;
 
 use Yii;
-use frontend\models\Aitechnology;
-use frontend\models\Aitechnologysearch;
+use frontend\models\Comments;
+use frontend\models\Commentssearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * AitechnologyController implements the CRUD actions for Aitechnology model.
+ * CommentsController implements the CRUD actions for Comments model.
  */
-class AitechnologyController extends Controller
+class CommentsController extends Controller
 {
     /**
      * {@inheritdoc}
@@ -30,12 +30,12 @@ class AitechnologyController extends Controller
     }
 
     /**
-     * Lists all Aitechnology models.
+     * Lists all Comments models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new Aitechnologysearch();
+        $searchModel = new Commentssearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -44,10 +44,8 @@ class AitechnologyController extends Controller
         ]);
     }
 
-    
-
     /**
-     * Displays a single Aitechnology model.
+     * Displays a single Comments model.
      * @param integer $id
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
@@ -60,25 +58,31 @@ class AitechnologyController extends Controller
     }
 
     /**
-     * Creates a new Aitechnology model.
+     * Creates a new Comments model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
-    public function actionCreate()
-    {
-        $model = new Aitechnology();
-
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
-        }
-
-        return $this->render('create', [
-            'model' => $model,
-        ]);
+// CommentsController.php
+public function actionCreate($technology_id)
+{
+    $comment = new Comments();
+    
+    if ($comment->load(Yii::$app->request->post(), '') && $comment->save()) {
+        // 保存评论时，设置关联的 technology
+        $comment->tech_name = $technology_id;
+        $comment->save();
+        
+        return $this->redirect(['aitechnology/view', 'id' => $technology_id]);
     }
+    
+    return $this->render('create', [
+        'model' => $comment,
+    ]);
+}
+
 
     /**
-     * Updates an existing Aitechnology model.
+     * Updates an existing Comments model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -98,7 +102,7 @@ class AitechnologyController extends Controller
     }
 
     /**
-     * Deletes an existing Aitechnology model.
+     * Deletes an existing Comments model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -112,15 +116,15 @@ class AitechnologyController extends Controller
     }
 
     /**
-     * Finds the Aitechnology model based on its primary key value.
+     * Finds the Comments model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Aitechnology the loaded model
+     * @return Comments the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Aitechnology::findOne($id)) !== null) {
+        if (($model = Comments::findOne($id)) !== null) {
             return $model;
         }
 
