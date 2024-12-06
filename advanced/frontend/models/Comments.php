@@ -5,22 +5,21 @@ namespace frontend\models;
 use Yii;
 
 /**
- * This is the model class for table "ai_technology".
+ * This is the model class for table "comments".
  *
  * @property int $id
  * @property string $tech_name
- * @property string|null $description
- * @property string|null $application_area
+ * @property string $comment
  * @property string $created_at
  */
-class Aitechnology extends \yii\db\ActiveRecord
+class Comments extends \yii\db\ActiveRecord
 {
     /**
      * {@inheritdoc}
      */
     public static function tableName()
     {
-        return 'ai_technology';
+        return 'comments';
     }
 
     /**
@@ -29,10 +28,10 @@ class Aitechnology extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['tech_name'], 'required'],
-            [['description'], 'string'],
+            [['tech_name', 'comment'], 'required'],
+            [['comment'], 'string'],
             [['created_at'], 'safe'],
-            [['tech_name', 'application_area'], 'string', 'max' => 255],
+            [['tech_name'], 'string', 'max' => 255],
         ];
     }
 
@@ -44,13 +43,8 @@ class Aitechnology extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'tech_name' => 'Tech Name',
-            'description' => 'Description',
-            'application_area' => 'Application Area',
+            'comment' => 'Comment',
             'created_at' => 'Created At',
         ];
-    }
-    public function getComments()
-    {
-        return $this->hasMany(Comments::class, ['tech_name' => 'tech_name']);
     }
 }
