@@ -6,7 +6,7 @@ use yii\helpers\Url;
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Artificial Intelligence Technologies';
+$this->title = '技术论坛';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="aitechnology-index">
@@ -15,8 +15,6 @@ $this->params['breadcrumbs'][] = $this->title;
 <section class="hero-section text-center text-white" style="background-image: url('path-to-your-image.jpg'); background-size: cover; background-position: center center; padding: 80px 0;">
     <div class="container">
         <h1 class="display-4"><?= Html::encode($this->title) ?></h1>
-        <p class="lead">Explore the evolving world of AI technologies and join the conversation. Learn and share knowledge with experts!</p>
-        <?= Html::a('Start Exploring', ['#'], ['class' => 'btn btn-primary btn-lg shadow-lg']) ?>
     </div>
 </section>
 

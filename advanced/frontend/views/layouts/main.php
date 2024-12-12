@@ -147,7 +147,7 @@ AppAsset::register($this);
                 ['label' => 'Videos', 'url' => ['/aivideos/index']],
             ],
         ],
-        ['label' => 'News', 'url' => ['/ainews/index']],
+        ['label' => 'News', 'url' => ['/abnews/index']],
         ['label' => 'Technology', 'url' => ['/aitechnology/index']]
     ];
     

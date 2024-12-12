@@ -72,17 +72,18 @@ use yii\widgets\ListView;
             margin: 20px auto;
             max-width: 1200px;
         }
-        .ainews-index h1 {
+       .ainews-index h1 {
             font-size: 36px;
             color: #333;
             margin-bottom: 40px;
         }
-        .news-grid {
+        /* 对新闻网格布局进行调整，实现左右对称分布 */
+       .news-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+            grid-template-columns: repeat(2, 1fr); /* 两列等宽布局，实现对称 */
             gap: 20px;
         }
-        .news-item {
+       .news-item {
             display: flex;
             align-items: center;
             background: #ffffff;
@@ -91,36 +92,41 @@ use yii\widgets\ListView;
             overflow: hidden;
             transition: transform 0.2s, box-shadow 0.2s;
         }
-        .news-item:hover {
+       .news-item:hover {
             transform: translateY(-5px);
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
         }
-        .news-image {
+       .news-image {
             flex: 1;
             height: 200px;
             overflow: hidden;
         }
-        .news-image img {
+       .news-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-        .news-content {
+       .news-content {
             flex: 1;
             padding: 20px;
         }
-        .news-content h2 {
+       .news-content h2 {
             font-size: 20px;
             color: #333;
             margin-bottom: 10px;
         }
-        .news-content p {
+       .news-content p {
             font-size: 14px;
             color: #555;
             line-height: 1.6;
             margin-bottom: 15px;
         }
-        .btn {
+        /* 调整新闻链接的字体大小 */
+       .news-content a {
+            font-size: 16px; /* 增大字体大小，可根据实际需求调整数值 */
+            display: block; /* 让链接独占一行，便于布局对称效果更好呈现 */
+        }
+       .btn {
             display: inline-block;
             padding: 10px 20px;
             font-size: 14px;
@@ -132,7 +138,7 @@ use yii\widgets\ListView;
             text-decoration: none;
             transition: background-color 0.2s;
         }
-        .btn:hover {
+       .btn:hover {
             background-color: #0056b3;
         }
     </style>
@@ -143,29 +149,20 @@ use yii\widgets\ListView;
     <div class="hero-content">
         <h1>欢迎来到 AI 新闻中心</h1>
         <p>获取最新的人工智能动态、技术解析和行业趋势。</p>
-        <a href="#news" class="btn">了解更多</a>
     </div>
     <div class="hero-image">
         <img src="http://127.0.0.1/yii-advanced-app-2.0.32/advanced/frontend/assets/img/Ainews/home.jpg" alt="工具图标">
     </div>
     </div>
     <!-- 新闻列表 Section -->
-    <div class="ainews-index">
-        <h1><?= Html::encode($this->title) ?></h1>
-        <div class="news-grid">
+    <div class="p-10 flex flex-col">
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-surface-800 news-grid">
             <?php foreach ($dataProvider->getModels() as $model): ?>
-                <div class="news-item">
-                    <div class="news-image">
-                        <?= Html::img($model->image_url, [
-                            'alt' => $model->title
-                        ]) ?>
-                    </div>
-                    <div class="news-content">
-                        <!-- 将标题包裹在 <a> 标签中，并添加 href 属性 -->
-                        <h2><a href="<?= \yii\helpers\Url::to(['view', 'id' => $model->id]) ?>" class="news-title"><?= Html::encode($model->title) ?></a></h2>
-                        <p><?= Html::encode(mb_substr($model->content, 0, 100)) . '...' ?></p>
-                        <?= Html::a('Read More', ['view', 'id' => $model->id], ['class' => 'btn']) ?>
-                    </div>
+                <div>
+                    <a href="<?= \yii\helpers\Url::to(['view', 'id' => $model->id]) ?>" class="line-clamp-1 mt-4 hover:text-brand-500">
+                    <?= $model->id ?>.<?= Html::encode($model->title) ?>
+                    </a>
                 </div>
             <?php endforeach; ?>
         </div>
