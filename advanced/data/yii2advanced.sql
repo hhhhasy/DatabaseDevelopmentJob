@@ -11,7 +11,7 @@
  Target Server Version : 50726
  File Encoding         : 65001
 
- Date: 01/12/2024 12:31:49
+ Date: 15/12/2024 15:45:58
 */
 
 SET NAMES utf8mb4;
@@ -39,7 +39,6 @@ INSERT INTO `ai_applications` VALUES (1, '疾病诊断', '基于AI技术的疾�
 INSERT INTO `ai_applications` VALUES (2, '自动化交易', '利用AI算法进行证券、外汇等市场的自动化交易。算法能够实时分析市场数据并执行买卖操作。', '机器学习', '金融', '股票市场预测、外汇交易、风险管理等', 'http://127.0.0.1/yii-advanced-app-2.0.32/advanced/frontend/assets/img/app/swap.png');
 INSERT INTO `ai_applications` VALUES (3, '语音识别', '语音识别技术通过分析语音信号，将其转换为文字，可以用于多种人机交互场景。', '语音识别', '消费电子', '语音助手、智能家居控制、车载语音识别等', 'http://127.0.0.1/yii-advanced-app-2.0.32/advanced/frontend/assets/img/app/voice.png');
 INSERT INTO `ai_applications` VALUES (4, '自动驾驶', '自动驾驶技术使得汽车能够自主感知环境、规划路径并进行驾驶，减少人工干预。', '深度学习', '汽车', '自动驾驶、无人车、智能交通系统等', 'http://127.0.0.1/yii-advanced-app-2.0.32/advanced/frontend/assets/img/app/drive.jpg');
-INSERT INTO `ai_applications` VALUES (5, '智能客服', '基于自然语言处理（NLP）的聊天机器人系统，能够理解用户提问并提供实时答复。', '自然语言处理', '服务业', '客户服务、24小时在线客服、企业咨询等', 'http://127.0.0.1/yii-advanced-app-2.0.32/advanced/frontend/assets/img/app/chat.jpg');
 INSERT INTO `ai_applications` VALUES (6, '图像识别', '通过深度学习和计算机视觉，系统能够自动识别图像中的物体和场景。', '计算机视觉', '零售', '产品识别、库存管理、安防监控等', 'http://127.0.0.1/yii-advanced-app-2.0.32/advanced/frontend/assets/img/app/CV.jpg');
 INSERT INTO `ai_applications` VALUES (7, '推荐系统', '基于用户行为数据，AI推荐系统能够提供个性化的产品、服务或内容推荐。', '机器学习', '电商、媒体', '个性化广告推送、商品推荐、电影推荐等', 'http://127.0.0.1/yii-advanced-app-2.0.32/advanced/frontend/assets/img/app/ML.jpg');
 INSERT INTO `ai_applications` VALUES (8, '风险评估', 'AI模型分析借贷人的财务状况、信用历史等数据，为金融机构提供风险评估。', '机器学习', '金融', '贷款审批、信用评分、保险风险评估等', 'http://127.0.0.1/yii-advanced-app-2.0.32/advanced/frontend/assets/img/app/finance.jpg');
@@ -291,6 +290,56 @@ INSERT INTO `migration` VALUES ('m190124_110200_add_verification_token_column_to
 INSERT INTO `migration` VALUES ('m241117_142413_Ainews', 1731853544);
 
 -- ----------------------------
+-- Table structure for news
+-- ----------------------------
+DROP TABLE IF EXISTS `news`;
+CREATE TABLE `news`  (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `publish_time` datetime(0) NOT NULL,
+  `content` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `tags` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `image_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 11 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+
+-- ----------------------------
+-- Records of news
+-- ----------------------------
+INSERT INTO `news` VALUES (1, '公安部曝光AI造谣新犯罪:6人批量发布50万篇引流虚假信息', '2024-12-12 13:59:00', '据南方都市报报道，公安部网安局近日公布的一起典型案例揭示了令人担忧的网络造谣新模式。广东广州公安机关成功侦破一起利用人工智能工具大规模制造虚假信息的犯罪团伙，抓获6名犯罪嫌疑人。\n\n犯罪团伙以赚取网络平台流量收益为目的，采用精心策划的犯罪手法:招募兼职人员注册自媒体账号，利用AI工具快速改写热门文章，批量发布虚假信息。据统计，该团伙累计发布引流图文信息超过50万篇，造成严重的网络信息污染。\n\n调查发现，犯罪分子可以轻而易举地获取各类AI写作工具。这些工具功能多样，不仅能快速生成公众号文章、视频脚本、社交媒体文案，还能进行文章续写、内容改写和图片生成等操作。令人震惊的是，一些会员服务费用极其低廉，每月仅需99元，年费还能享受五折优惠。\n\n中国计算机学会专家方宇指出，犯罪分子利用AI工具生成谣言的成本已经极其低廉。随着大模型算法开源和AI技术日益成熟，犯罪分子获取和使用这些工具的门槛正在不断降低。\n\n这一案例不仅暴露了AI技术可能被滥用的严重风险，也凸显了打击网络造谣、维护网络信息秩序的紧迫性。公安机关的成功侦破，为遏制AI违法犯罪提供了有力示范。', '人工智能, 网络造谣, 虚假信息, Midjourney', 'http://127.0.0.1/yii-advanced-app-2.0.32/advanced/frontend/assets/img/news/gongan.jpg');
+INSERT INTO `news` VALUES (2, '百度文库上线「专业PPT生成」AI功能：支持一键生成高质量PPT', '2024-12-12 13:53:00', '百度文库近日宣布其AI功能再次升级，推出了「专业PPT生成」功能，旨在帮助用户轻松创建专业且高质量的PPT演示文稿。这项新功能通过AI技术，能够根据用户输入的关键词或主题，一键生成内容明确、主题突出、专业术语运用得当的PPT，极大地简化了从构思到设计再到成稿的繁琐制作过程。\n\n「专业PPT生成」功能不仅具备强大的AI生成能力，还在内容深度和广度上为用户提供全方位支持。无论是年终总结、演讲汇报还是学术报告，用户只需输入相关主题，即可快速获得一份结构清晰、逻辑合理的PPT。该功能特别适合需要梳理工作脉络、展示团队工作成果和个人工作成果的职场人士，能够帮助他们清晰地展示过去一年的工作成果和未来规划。\n\n此外，「专业PPT生成」功能采用了全新的商务化PPT版式，使得PPT在视觉上更加专业、更具说服力。从封面到目录，再到内容页和结尾页，每一页都经过精心设计，结构清晰明了。AI还会根据内容需求，智能推荐适合的版式，让用户在制作PPT的过程中更加得心应手。\n\n百度文库的这一升级，不仅提高了PPT制作的效率，还提升了演示文稿的专业度，有助于用户在职场汇报中脱颖而出。用户可以登录百度文库平台，体验「专业PPT生成」功能，从而让职场汇报变得更加轻松。\n\n百度文库通过此次升级，进一步巩固了其作为一站式AI内容获取和创作平台的地位，为用户提供更加高效、便捷的创作体验。', 'AI功能升级, 专业PPT生成, 百度文库, 高质量PPT', 'http://127.0.0.1/yii-advanced-app-2.0.32/advanced/frontend/assets/img/news/baidu.jpg');
+INSERT INTO `news` VALUES (3, 'AI音频新技术MMAudio：输入视频或文本可自动给视频配音效', '2024-12-12 11:55:00', '近日，来自伊利诺伊大学厄巴纳 - 香槟分校、Sony AI 及 Sony 集团公司的研究团队推出了一项名为 MMAudio 的新技术，该技术旨在通过多模态联合训练，实现高质量的视频到音频合成。\n\nMMAudio 的核心创新在于能够利用视频和文本输入生成同步的音频，从而拓展了音频生成的应用场景，支持输入视频或文本，生成符合视频内容的音效。\n\nMMAudio 的设计使其能够在各种视听和音频文本数据集上进行训练。这种多模态联合训练的方式，不仅提高了合成音频的质量，还确保了生成的音频与视频帧之间的同步。这一同步模块的引入，极大地增强了音频生成的精确度，确保了音频和视频内容的一致性。\n\n目前，MMAudio 的代码库仍在建设中，研究人员表示单个示例推理功能已经可以正常使用，而训练代码则将在后续版本中推出。为了便于用户使用，该技术已在 Ubuntu 操作系统上进行测试，并提供了相关的安装指南。用户需要准备 Python3.9及以上版本，以及适当版本的 PyTorch 和 ffmpeg，随后可以通过简单的命令安装 MMAudio。\n\nMMAudio 在生成音频时仍存在一些局限性，比如偶尔会产生不清晰的语音或背景音乐，同时对某些陌生概念的处理也不够理想。研究团队认为，增加高质量的训练数据能够帮助解决这些问题。随着研究的不断推进，MMAudio 有望在未来进一步优化其性能。', 'MMAudio, SonyAI, 音频合成, 多模态联合训练', 'http://127.0.0.1/yii-advanced-app-2.0.32/advanced/frontend/assets/img/news/ai.jpg');
+INSERT INTO `news` VALUES (4, 'ChatGPT宕机是苹果的锅？OpenAI紧急抢修，目前已恢复访问', '2024-12-12 11:31:00', 'OpenAI 旗下两大王牌产品——ChatGPT 聊天助手和 Sora 视频生成器，周三突发大面积“断网”事故，全球用户一度无法访问。OpenAI 官方在 X 平台发布声明，表示已锁定问题，正全力修复。\n\n根据分析，此次 ChatGPT 宕机事件的“罪魁祸首”可能指向苹果。就在昨天，苹果公司发布了 iPhone、iPad 和 Mac 的新软件版本，其中一项重要更新便是将 ChatGPT 功能深度集成到了 Siri 中。\n\n今天，除个别国家外，全球大量苹果设备涌入系统更新，新版 Siri 的 ChatGPT 功能无疑给 OpenAI 服务器带来了巨大的负载，最终导致服务器崩溃。\n\nOpenAI 证实，其 AI 聊天机器人 ChatGPT 正经历全球范围的宕机，不仅用户无法正常访问，iOS18.2与 Siri 的集成功能也受到影响。\n\n这次宕机事件持续超过三个小时，给数百万依赖 OpenAI 服务的用户带来了不小的麻烦。回溯今年6月，ChatGPT 也曾遭遇过长达五个多小时的宕机，这让用户对 OpenAI 服务的稳定性产生了担忧。不过，值得庆幸的是，北京时间11点左右，ChatGPT 已恢复正常访问。\n\n这次事件再次凸显了 AI 服务对算力的巨大需求，以及突发流量激增可能带来的挑战。苹果与 OpenAI 的合作，本意是为了提升用户体验，不料却引发了意想不到的“副作用”。如何平衡技术创新与服务稳定性，将成为 OpenAI 以及其他 AI 公司需要认真思考的问题。此外，这也提醒我们，在享受 AI 技术便利的同时，也要对其潜在的风险保持警惕。', 'OpenAI, ChatGPT, Sora, 苹果, 宕机事件, 技术挑战', 'http://127.0.0.1/yii-advanced-app-2.0.32/advanced/frontend/assets/img/news/chat.jpg');
+INSERT INTO `news` VALUES (5, '谷歌推出 AI 编码助手 “Jules”，自动修复软件漏洞并加速开发流程', '2024-12-12 10:57:00', '谷歌于周三正式推出其人工智能编码助手 “Jules”，这一新产品标志着谷歌在自动化编程任务方面的重大进展。Jules基于最新的 Gemini2.0平台开发，能够在开发者休息时自主修复软件漏洞并准备代码更改。\n\n该系统能够与 GitHub 工作流程系统直接整合，分析复杂的代码库，实施跨多个文件的修复，并在无需持续人工监督的情况下生成详细的拉取请求。\n\nJules的发布时机恰逢软件开发行业面临持续的人才短缺和技术债务的压力。市场研究公司 Gartner 预测，到2028年，AI 辅助编码将在75% 的新应用开发中发挥作用。这一趋势表明，自动化编码助手的需求日益增加。\n\n与传统的编码助手不同，朱尔斯不仅仅提供修复建议，而是作为一个自主代理在 GitHub 生态系统内运作。它可以分析代码库、制定全面的修复计划，并同时在多个文件中执行修复任务。此外，Jules与现有开发者工作流程的无缝集成使其更加实用。\n\n在新闻发布会上，谷歌实验室产品管理总监雅克琳・孔泽尔曼强调了系统的安全性特点。她表示:“开发者在整个过程中保持控制。” Jules在采取行动前会提出建议计划，用户可以实时监控其代码编写进展，并在合并任何更改之前必须获得明确批准，确保开发过程中的人类监督。\n\nJules不仅是一个编码助手，它也是谷歌更大愿景中的一部分，该愿景是打造能够自主运作的 AI 代理，同时保持人类的监督。该系统由谷歌最新的大型语言模型 Gemini2.0驱动，显著提升了代码理解和生成能力。\n\n对于许多开发者而言，Jules引发了对职业未来的重要思考。然而，初步测试表明，Jules更有可能增强而非取代人类开发者的工作。通过使用Jules及相关工具，洛伦斯・伯克利国家实验室的研究人员将某些分析任务的处理时间从一周缩短到几分钟，使他们能够专注于更复杂的挑战。\n\n在财务方面，Jules可能带来显著影响。根据麦肯锡的统计，软件开发项目常常面临成本超支的风险，大型 IT 项目的预算通常超出45%，而交付的价值比预期减少56%。通过自动化例行的漏洞修复和维护任务，Jules有望大幅降低这些成本，并加速开发周期。\n\nJules将在初期仅向一小部分受信测试者开放，预计2025年初将实现更广泛的访问。谷歌已计划将类似功能整合到其开发生态系统中，包括 Android Studio 和 Chrome DevTools。\n\n随着技术的进步，Jules将面临越来越复杂的编程挑战，并需保持代码质量和安全性。一位大型科技公司的高级开发者表示:“这一承诺不仅在于更快地修复漏洞，更在于从根本上改变我们对软件开发的看法。”', '人工智能编码助手, Jules, Gemini2.0, GitHub, 自动化编码, 软件漏洞修复, 开发流程', 'http://127.0.0.1/yii-advanced-app-2.0.32/advanced/frontend/assets/img/news/guge.jpg');
+INSERT INTO `news` VALUES (6, '谷歌推出新一代 Trillium AI 芯片，性能提升四倍', '2024-12-12 10:12:00', '谷歌近日发布了其第六代人工智能加速器芯片 Trillium，声称这一突破性的技术进步将可能从根本上改变人工智能发展的经济学，并推动机器学习的边界。Trillium 芯片在谷歌新发布的 Gemini2.0AI 模型的训练过程中展现了显著的性能提升，其训练性能是前一代产品的四倍，同时能耗大幅降低。\n\n谷歌首席执行官桑达尔・皮查伊在发布会上强调，Trillium 芯片是公司 AI 战略的核心，Gemini2.0的训练和推理均完全依赖于这一芯片。谷歌已经在单一网络中连接了超过10万颗 Trillium 芯片，构建了全球最强大的 AI 超级计算机之一。\n\nTrillium 芯片的技术规格在多个维度上取得了显著进步。与其前代产品相比，Trillium 在单颗芯片的峰值计算性能上提高了4.7倍，同时高带宽内存容量和芯片间连接带宽均实现了翻倍。更重要的是，芯片的能效提升了67%，这是在数据中心面临巨大的能耗压力下，尤其重要的指标。\n\n在经济层面，Trillium 的表现也颇具影响力。谷歌表示，与前一代芯片相比，Trillium 在训练性能上的每美元投入提升了2.5倍，可能会重塑 AI 开发的经济模型。AI21Labs 作为 Trillium 的早期用户，已经报告了显著的提升。该公司的首席技术官巴拉克・伦茨表示，规模、速度和成本效益方面的进展都十分显著。\n\n谷歌在 AI 超级计算机架构中部署 Trillium，展示了其对 AI 基础设施的综合整合方法。这一系统结合了超过10万颗 Trillium 芯片和每秒13拍比特的 Jupiter 网络，能够支持单个分布式训练任务在数十万个加速器之间的扩展。\n\nTrillium 的发布将进一步加剧 AI 硬件领域的竞争，尤其是在 Nvidia 主导的市场中。尽管 Nvidia 的 GPU 仍是许多 AI 应用的行业标准，但谷歌的定制芯片方案在特定工作负载中可能具备优势。行业分析师指出，谷歌在定制芯片开发上的巨大投资，体现了其对 AI 基础设施日益重要性的战略判断。\n\n随着技术的不断进步，Trillium 不仅仅意味着性能的提升，还预示着 AI 计算将变得更加普及和经济。谷歌表示，拥有合适的硬件和软件基础设施将是推动 AI 持续进步的关键。未来，随着 AI 模型日益复杂，基础硬件的需求将不断增加，谷歌显然意图在这一领域保持领先地位。', 'Trillium, Gemini2.0, 人工智能加速器, 谷歌, AI 芯片, 机器学习, 性能提升', 'http://127.0.0.1/yii-advanced-app-2.0.32/advanced/frontend/assets/img/news/Trillium.jpg');
+INSERT INTO `news` VALUES (7, 'Midjourney 推出多人协作的世界构建工具 “Patchwork” 支持100人同一画布操作', '2024-12-12 10:09:00', 'Midjourney 是一家备受欢迎的 AI 图像生成初创公司，拥有超过2100万名 Discord 用户。近日，该公司宣布将推出一款新的世界构建工具 “Patchwork”，标志着他们从图像创作扩展到更复杂的创意合作领域。\n\n“Patchwork” 在 Midjourney 的 Discord 频道通过直播展示，用户需要将他们的 Midjourney Discord 帐户连接到他们的 Google 帐户才能访问 Patchwork 的研究预览。\n\n该工具提供一个白色的无限画布，左侧有一个工具箱，用户可以使用各种按钮来添加角色、事件、派系、地点、道具等元素。用户可以通过 “保存” 功能下载 JSON 文件，包含在画布上生成的所有 Midjourney 图像的链接。\n\n要生成新世界，用户在 “create” 屏幕顶部的编辑器栏中输入文本提示，然后从一组10种不同的图像样式中选择一种或多种。\n\n然后，这会生成一个新的白板，其中包含一堆新的静止图像资产和文本框或实体（称为“碎片(scraps）”)，包括允许用户提示符合初始世界描述的新图像或设置的输入框，甚至是全新的 AI 生成的角色描述。\n\n可以添加新的角色框，然后用户可以提示创建名称和特征。同时，用户可以在角色之间建立连接，并撰写动作序列和场景描述。\n\n共享功能允许多个用户实时协作，一个世界最多可支持100名用户在同一画布上操作，不过用户越多，画布上的协作可能会越混乱。\n\n在未来的更新中，Midjourney 计划允许非用户查看这些创作板，以便更多的创意团体能够使用这一工具。Midjourney 的 V7版本也将推出，支持角色在不同图像中的一致性。此外，Kreminski 提到，Patchwork 的背后有三个大型语言模型在运作，包括一个专为 Midjourney 定制的开源模型。\n\nKreminski 表示，未来 “Patchwork” 有望发展为更加详细和互动的3D 虚拟场景，但这一目标可能还需数年时间。与此同时，Midjourney 的创始人 David Holz 在直播中透露，近期将推出多个个性化模型模式，让用户可以根据自己的偏好调整生成内容。\n\nHolz 还提到，Midjourney 将在圣诞节后推出视频模型及更新的 AI 图像生成器 V7，提升对提示的理解能力。此外，该公司还在研发三到四个新的硬件项目，计划在未来几个月内逐步公布更多相关信息。', 'Midjourney, AI图像生成, Patchwork, Discord, 合作工具, 3D虚拟场景, V7, 视频模型', 'http://127.0.0.1/yii-advanced-app-2.0.32/advanced/frontend/assets/img/news/Midjourney.jpg');
+INSERT INTO `news` VALUES (8, 'Adobe 进军 AI 视频生成！Firefly 平台内容生成破 160 亿，视频创作即将迈入“付费时代”', '2024-12-12 09:59:00', 'Adobe 正大举扩张其人工智能 （AI） 版图，在 Firefly AI 平台取得巨大成功的基础上，推出全新的高端视频生成功能。据公司称，自推出以来，Firefly 平台已生成超过160亿个内容，其影响力可见一斑。\n\n在12月11日（周三）的第四季度财报电话会议上，Adobe 宣布计划于明年初推出 AI 视频生成功能，作为一项高级服务。目前，该功能正处于有限的公开测试阶段，但已成功推动 Premiere Pro 测试版用户量增长70%。\n\nAdobe 数字媒体总裁大卫·瓦德瓦尼表示:“视频生成是一项比图像生成价值更高的活动。” 公司计划利用这项技术在其 Creative Cloud 产品中创建新的定价层级，以反映 AI 驱动的视频创作的强大能力。\n\n瓦德瓦尼强调，Adobe 的 AI 实现具有三个显著特点:“首先，我们训练模型的方式具有商业安全性。其次，我们将强大的控制力融入模型中。第三，我们将这些模型集成到我们的产品中。”\n\nAdobe 公布的截至11月29日的第四季度营收为56.1亿美元，同比增长11%。2024财年，公司实现创纪录营收215.1亿美元，较上一财年的194.2亿美元增长。该公司报告当季运营现金流达创纪录的29.2亿美元，剩余履约义务 （RPO） 达创纪录的199.6亿美元，同比增长16%。\n\nPYMNTS 此前报道称，Adobe 于10月份推出了一款 AI 视频创作工具，该工具通过使用许可内容专门解决了版权问题。2024年，美国各州立法机构提出了近700项与 AI 相关的法案，其中科罗拉多州通过了全面的立法，而加利福尼亚州则采取了更为谨慎的态度，否决了一些提案。\n\nFirefly 点亮产品组合\nAdobe 的 AI 战略涵盖其整个产品组合。其 Firefly AI 模型系列现在包括图像、矢量设计和视频功能。这些工具已集成到 Adobe 的旗舰应用程序中，包括 Photoshop、Premiere Pro 和公司的网络平台 Express。\n\nAdobe 的 AI 技术在企业中的应用尤为强劲。通过 Firefly 服务，百事可乐公司允许客户个性化定制佳得乐商品，而 Tapestry 公司则利用该技术进行大规模的内容生产。Adobe 通过 Gen Studio 进一步整合这些功能，这是一种将创意工具与营销和内容管理功能相结合的新产品，旨在帮助企业扩展内容生产。\n\nAdobe 董事长兼首席执行官 Shantanu Narayen 表示:“Firefly 在 Creative Cloud、Document Cloud 和 Experience Cloud 的旗舰应用程序中的集成，正在推动客户采用率和使用率的创纪录增长。我们工具中由 Firefly 驱动的内容生成量已超过160亿次，且过去这个季度每个月都刷新了记录。”\n\n在文档生产力方面，Adobe 的 Acrobat AI 助手的使用量环比翻了一番。该工具可以帮助用户分析和处理 PDF 文档，并已显示出生产力的提升，研究表明用户完成与文档相关的任务平均速度提高了四倍。现在，该 AI 助手可在桌面、网络和移动平台以及 Edge Chrome 和 Microsoft Teams 扩展程序中使用。\n\n关注开发者教育\n除了商业应用之外，Adobe 还宣布了一项全球性计划，旨在帮助3000万下一代学习者使用 Adobe Express 培养 AI 素养、内容创作和数字营销技能。该计划涉及与教育机构、学校、非营利组织和在线学习平台合作，提供培训、认证和职业发展途径。\n\nAdobe 的 AI 货币化方法包括三个主要渠道:即将推出的视频生成功能等高级功能、通过 Firefly 提供的企业服务以及其产品套件中集成的 AI 助手。Adobe 的目标是在通过易于使用的工具扩展市场的同时，为专业用户和企业引入高级 AI 功能。\n\nNarayen 表示:“我们高度差异化的技术平台、快速的创新步伐、多元化的上市策略以及云产品的集成，为我们未来一年的发展奠定了坚实的基础。”\n\nAdobe 表示，在加速 AI 开发的同时，将继续关注商业安全和用户控制。公司的 Firefly 模型经过专门设计，可确保创意内容的商业安全，并在其应用程序中提供 Adobe 所称的“前所未有的输出质量和用户控制”。', 'Firefly, AI视频生成, Adobe, 生成式AI, 图片生成', 'http://127.0.0.1/yii-advanced-app-2.0.32/advanced/frontend/assets/img/news/Adobe.jpg');
+INSERT INTO `news` VALUES (9, '苹果与博通联手研发 AI 服务器处理器，计划2026年投产', '2024-12-12 09:49:00', '据报道，苹果公司正在与芯片巨头博通合作，研发一款专门用于支持其操作系统中 AI 服务和功能的定制服务器处理器。这一项目代号为 “Baltra”，预计将在2026年进入生产阶段。\n\n目前，关于这个项目的具体细节仍然相对较少。在今年的开发者大会上，苹果软件工程高级副总裁克雷格・费德里希曾表示，苹果的智能技术将同时运行于本地设备和私人云服务器上，而这些服务器将由苹果自家的硅芯片驱动。\n\n苹果自成立以来便一直致力于设计自家的基于 Arm 架构的芯片，因此开发专用于生成 AI 的定制芯片并不令人意外。同时，博通参与该项目也在情理之中，因为两家公司已经在5G 组件领域展开了合作。\n\n博通是一家庞大的企业，除了芯片设计外，还在高速网络领域提供知识产权许可。例如，在最近的 Hot Chips 大会上，博通展示了一款光互连芯片，它能够与 GPU 等加速器配合使用，以支持更大规模的计算集群。\n\n此外，博通还展示了其3.5D 封装技术，旨在帮助芯片制造商突破硅片极限，这与英特尔的 Ponte Vecchio GPU Max 产品相似。AMD 也采用类似的技术，打造了结合八个计算芯片和四个 I/O 芯片的 MI300X 加速器，以处理内存管理和芯片间通信。\n\n博通的3.5D 极限尺寸系统封装技术（3.5D XDSiP）为客户提供了构建多芯片处理器的蓝图。类似于 AMD 的 MI300X，博通的设计在逻辑芯片上堆叠计算芯片，并将其他 I/O 功能分配到单独的芯片中。博通表示，其设计使用了面对面的方式，能够实现更高的芯片间连接速度和更短的信号路由。\n\n虽然博通的计划与苹果的 Baltra 项目时间相同，但目前尚不清楚两者是否有关联。不过，苹果的一些芯片设计，如 M2Ultra，已经采用了多芯片架构，因此可以推测可能会有某种重叠。\n\n在 Baltra 项目正式亮相之前，关于其更多的信息仍将是个谜。苹果公司在新产品发布前向来低调，而博通则通常愿意讨论其芯片技术，但对具体客户信息保持高度保密。', '苹果, 博通, Baltra, AI服务', 'http://127.0.0.1/yii-advanced-app-2.0.32/advanced/frontend/assets/img/news/pingguo.jpg');
+INSERT INTO `news` VALUES (10, '苹果Apple Intelligence全新升级 与ChatGPT无缝连接', '2024-12-12 09:37:00', '12月11日，苹果公司宣布发布 iOS18.2、iPadOS18.2和 macOS Sequoia15.2，带来了全新的 Apple Intelligence（苹果智能）功能。这些功能旨在提升用户在 iPhone、iPad 和 Mac 上的使用体验，进一步拓展了用户的创作与表达能力。\n\n此次升级中，用户可以通过 “Image Playgroud” 功能轻松创作有趣的独特图像。用户可以选择主题、服饰、配件和场景，还可以利用自己的照片库生成与亲友相似的图像。\n\nImage Playgroud 支持多种风格，包括现代的3D 动画和简洁的插图风格，使得图像创作更加多样化。这一功能已集成至信息应用中，用户可以在对话中直接创建并分享图片。\n\n此外，苹果还推出了 “Genmoji” 功能，用户可以根据自己的描述生成个性化表情。这些表情不仅可以在线发送，还可以作为贴纸或反应使用，增加了日常交流的趣味性和个性化。用户可以用照片库中的图像进一步定制表情，加入不同的配饰和主题。\n\n在写作方面，苹果的 “写作工具” 得到了增强，用户现在可以通过 “描述你的变化” 选项，自定义想要进行的修改。这一新功能使得用户可以更灵活地调整文本，例如让简历更具表现力或将晚宴邀请函改写为诗歌，提升写作的趣味性和创造性。\n\n另外，iPhone16系列用户还可以利用 “视觉智能” 功能，通过 “相机控制” 快速了解周围的物体和地点。用户可以使用此功能提取和翻译文本信息，甚至查找商品的购买渠道。\n\n在聊天助手 Siri 和写作工具中，苹果也集成了 ChatGPT，用户可以通过这些工具直接访问其智能服务。这种集成使得用户在创作时可以更加高效地获得支持，无需频繁切换应用。用户可以选择是否启用 ChatGPT，确保个人信息的安全。\n\n苹果强调其在隐私保护方面的努力，所有的智能处理均在设备上完成，确保用户数据的安全性。苹果承诺，用户的数据不会被存储或共享，进一步增强了用户对苹果智能系统的信任。', '苹果, ChatGPT, Genmoji, 写作工具', 'http://127.0.0.1/yii-advanced-app-2.0.32/advanced/frontend/assets/img/news/pinguo.jpg');
+
+-- ----------------------------
+-- Table structure for team_members
+-- ----------------------------
+DROP TABLE IF EXISTS `team_members`;
+CREATE TABLE `team_members`  (
+  `member_id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `age` int(11) NOT NULL,
+  `major` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `province` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
+  `description` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL,
+  `image_url` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`member_id`) USING BTREE
+) ENGINE = MyISAM AUTO_INCREMENT = 5 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of team_members
+-- ----------------------------
+INSERT INTO `team_members` VALUES (1, 'asy', 20, '信息安全', '内蒙古', '阳光开朗大小孩', 'http://127.0.0.1/yii-advanced-app-2.0.32/advanced/frontend/assets/img/creator/asy.jpg');
+INSERT INTO `team_members` VALUES (2, 'Lorry', 20, '密码学', '安徽', '阳光开朗大男孩', 'http://127.0.0.1/yii-advanced-app-2.0.32/advanced/frontend/assets/img/creator/loryy.jpg');
+INSERT INTO `team_members` VALUES (3, 'Wang', 20, '密码学', '河北', '阳光开朗大男孩', 'http://127.0.0.1/yii-advanced-app-2.0.32/advanced/frontend/assets/img/creator/wangwang.jpg');
+
+-- ----------------------------
 -- Table structure for user
 -- ----------------------------
 DROP TABLE IF EXISTS `user`;
@@ -309,10 +358,11 @@ CREATE TABLE `user`  (
   UNIQUE INDEX `username`(`username`) USING BTREE,
   UNIQUE INDEX `email`(`email`) USING BTREE,
   UNIQUE INDEX `password_reset_token`(`password_reset_token`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of user
 -- ----------------------------
+INSERT INTO `user` VALUES (1, 'asy', 'RHPwc2nPoQMr3jCTUkLGsB42bM0uJq2-', '$2y$13$f0Spw4QLUmXsGc8qWRai1OVl2lnK.3YT8msNO0KCHww5wK4WdqIUi', NULL, 'paul_040808@qq.com', 10, 1733984269, 1733984269, 'KSxyn8jBYqF_kf0eTW26cBkbTdYxDk3B_1733984269');
 
 SET FOREIGN_KEY_CHECKS = 1;
