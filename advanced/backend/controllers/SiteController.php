@@ -61,6 +61,7 @@ class SiteController extends Controller
     public function actionIndex()
     {
         //$this->layout='main_layout';
+        //渲染并返回 index 部分视图的内容
         return $this->renderpartial('index');
     }
 
