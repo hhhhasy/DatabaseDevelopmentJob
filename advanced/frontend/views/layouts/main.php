@@ -31,7 +31,8 @@ AppAsset::register($this);
     <style>
         /* 页面背景 */
         body {
-            background-image: url('');
+            
+            background: #007BFF; /* 蓝色背景 */
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
