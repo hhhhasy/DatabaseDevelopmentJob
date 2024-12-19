@@ -6,31 +6,58 @@ use yii\helpers\Url;
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = '技术论坛';
-$this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="aitechnology-index">
+<div class="container" style="display: flex; height: 100vh;">
 
-    <!-- Hero Section with responsive image -->
-<section class="hero-section text-center text-white" style="background-image: url('path-to-your-image.jpg'); background-size: cover; background-position: center center; padding: 80px 0;">
-    <div class="container">
-        <h1 class="display-4"><?= Html::encode($this->title) ?></h1>
-    </div>
+<!-- 左侧菜单区域 -->
+<div class="left" style="width: 250px; background-color: lightblue; padding: 20px; height: 100vh; overflow: auto;">
+<!-- 搜索框 -->
+<div class="search-box mb-4">
+<h4>搜索</h4>
+<form method="get" action="#" class="d-flex">
+<input type="text" name="query" class="form-control" placeholder="输入搜索关键词" />
+<button type="submit" class="btn btn-primary ms-2">搜索</button>
+</form>
+</div>
+
+<!-- 论坛分类 -->
+<div class="forum-categories">
+    <h4>论坛分类</h4>
+    <ul class="list-group">
+        <li class="list-group-item"><a href="#">编程语言</a></li>
+        <li class="list-group-item"><a href="#">前端开发</a></li>
+        <li class="list-group-item"><a href="#">后端开发</a></li>
+        <li class="list-group-item"><a href="#">数据库</a></li>
+        <li class="list-group-item"><a href="#">人工智能</a></li>
+    </ul>
+</div>
+</div>
+
+<!-- 右侧内容区域 -->
+<div class="right" style="flex: 1; padding: 20px; height: 100vh; overflow-y: auto;">
+<!-- Hero Section with responsive image -->
+<section >
+<div class="container">
+<h1 class="display-4"><?= Html::encode($this->title) ?></h1>
+</div>
 </section>
 
-<!-- Technology Posts Section with dynamic card layout -->
-<div class="container mt-5">
+<!-- Technology Posts Section -->
     <div class="row">
         <?php foreach ($dataProvider->models as $technology): ?>
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="card creative-card shadow-lg h-100 border-light rounded">
-                    <div class="card-body">
-                        <h5 class="card-title"><?= Html::encode("What is " . $technology->tech_name . "?") ?></h5>
-                        <p class="card-text"><?= Html::encode($technology->description) ?></p> <!-- Add short description -->
-                    </div>
-                    <div class="card-footer text-center">
-                        <a href="<?= Url::to(['view', 'id' => $technology->id]) ?>" class="btn btn-light btn-lg">进入论坛</a>
-                    </div>
+            <div class="col-lg-12 mb-4">
+                <div class="p-4 border-0 shadow-sm">
+                   <!-- 点击标题跳转到相应的页面 -->
+                   <h5 class="card-title">
+                       <a href="<?= Url::to(['view', 'id' => $technology->id]) ?>" style="text-decoration: none; color: inherit;">
+                           <?= Html::encode("What is " . $technology->tech_name . "?") ?>
+                       </a>
+                   </h5>
+
+                   <p class="card-description">
+                       <?= Html::encode($technology->description) ?>
+                   </p>
+
                 </div>
             </div>
         <?php endforeach; ?>
@@ -46,76 +73,66 @@ $this->params['breadcrumbs'][] = $this->title;
         </div>
     </div>
 </div>
+</div>
 
 <!-- Custom Styles with responsive improvements -->
 <style>
-    .hero-section {
-        background-size: cover;
-        background-position: center center;
-        padding: 80px 0;
-        color: white;
-    }
 
-    .creative-card {
-        position: relative;
-        background: linear-gradient(135deg, #FF7043, #FF5722); /* Orange gradient */
-        border-radius: 25px;
-        padding: 30px;
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
+.search-box {
+    margin-bottom: 20px;
+}
 
-    .creative-card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
-    }
+.forum-categories h4 {
+    font-size: 1.5rem; /* Increase font size */
+    font-weight: bold;
+}
 
-    .card-title {
-        font-size: 1.5rem;
-        font-weight: bold;
-        color: white;
-        margin-bottom: 15px;
-    }
+.list-group-item a {
+    text-decoration: none;
+    color: #333;
+}
 
-    .card-text {
-        font-size: 1rem;
-        color: white;
-        margin-bottom: 20px;
-    }
+.list-group-item a:hover {
+    color: #FF5722;
+}
 
-    .btn-lg {
-        padding: 12px 24px;
-        font-size: 1.1rem;
-        background-color: #fff;
-        color: #FF5722;
-        border-radius: 50px;
-        border: none;
-        transition: background-color 0.3s ease, color 0.3s ease;
-    }
+.right {
+    flex: 1;
+    padding: 20px;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden; /* 禁止横向滚动条 */
+}
 
-    .btn-lg:hover {
-        background-color: #FF5722;
-        color: #fff;
-    }
+.pagination {
+    justify-content: center;
+}
 
-    .card-footer {
-        padding: 20px;
-    }
+/* Title customization - black font with bold weight */
+.card-title {
+    font-family: 'Helvetica', sans-serif;
+    font-weight: bold;
+    font-size: 3rem;  /* Adjusted font size for title */
+    color: #000;  /* Black color */
+    margin-bottom: 15px;
+    transition: color 0.3s ease;  /* Smooth color transition */
+}
 
-    /* Responsive Design for small screens */
-    @media (max-width: 768px) {
-        .creative-card {
-            padding: 20px;
-        }
+/* Title hover effect */
+.card-title:hover {
+    color: #FF5722; /* Title color changes to orange on hover */
+}
 
-        .card-title {
-            font-size: 1.25rem;
-        }
+/* Description customization - font size, color, and margin */
+.card-description {
+    font-size: 1.8rem;  /* Font size for the description */
+    color: #333;  /* Dark gray color for content */
+    margin-bottom: 20px;  /* Space between the content and next element */
+}
 
-        .btn-lg {
-            font-size: 1rem;
-            padding: 10px 20px;
-        }
-    }
+
+/* Ensure there's space between articles */
+.col-lg-12 {
+    margin-bottom: 30px; /* Add space between articles */
+}
 </style>
-
