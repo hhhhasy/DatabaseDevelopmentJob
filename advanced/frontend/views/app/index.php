@@ -10,8 +10,8 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="application-index" style="font-family: 'Noto Sans SC', 'PingFang SC', sans-serif; background: #f9f9fc; padding: 40px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
     <!-- 大头标题 -->
     <div class="page-header" style="text-align: center; margin-bottom: 40px;">
-        <h1 style="font-size: 42px; font-weight: bold; color: #333;">欢迎来到 AI 新闻中心</h1>
-        <p style="font-size: 18px; color: #555; margin-top: 10px;">获取最新的人工智能动态、技术解析和行业趋势。</p>
+        <h1 style="font-size: 42px; font-weight: bold; color: #333;">欢迎来到 AI 应用介绍中心</h1>
+        <p style="font-size: 18px; color: #555; margin-top: 10px;">获取最新的人工智能行业应用趋势。</p>
     </div>
 
     <!-- 网格布局的图片和文字部分 -->

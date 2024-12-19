@@ -155,6 +155,7 @@ AppAsset::register($this);
             'items' => [
                 ['label' => '工具', 'url' => ['/aitools/index']],
                 ['label' => '视频', 'url' => ['/aivideos/index']],
+                ['label' => 'AI经典算法', 'url' => ['/aialgorithm/index']],
             ],
         ],
         ['label' => '新闻', 'url' => ['/abnews/index']],

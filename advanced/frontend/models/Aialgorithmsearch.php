@@ -18,7 +18,7 @@ class Aialgorithmsearch extends Aialgorithm
     {
         return [
             [['id'], 'integer'],
-            [['name', 'description', 'example_image', 'animation'], 'safe'],
+            [['name', 'description', 'example_image'], 'safe'],
         ];
     }
 
@@ -63,8 +63,7 @@ class Aialgorithmsearch extends Aialgorithm
 
         $query->andFilterWhere(['like', 'name', $this->name])
             ->andFilterWhere(['like', 'description', $this->description])
-            ->andFilterWhere(['like', 'example_image', $this->example_image])
-            ->andFilterWhere(['like', 'animation', $this->animation]);
+            ->andFilterWhere(['like', 'example_image', $this->example_image]);
 
         return $dataProvider;
     }

@@ -11,7 +11,6 @@ use Yii;
  * @property string $name
  * @property string|null $description
  * @property string|null $example_image
- * @property string|null $animation
  */
 class Aialgorithm extends \yii\db\ActiveRecord
 {
@@ -31,7 +30,7 @@ class Aialgorithm extends \yii\db\ActiveRecord
         return [
             [['name'], 'required'],
             [['description'], 'string'],
-            [['name', 'example_image', 'animation'], 'string', 'max' => 255],
+            [['name', 'example_image'], 'string', 'max' => 255],
         ];
     }
 
@@ -45,7 +44,6 @@ class Aialgorithm extends \yii\db\ActiveRecord
             'name' => 'Name',
             'description' => 'Description',
             'example_image' => 'Example Image',
-            'animation' => 'Animation',
         ];
     }
 }
