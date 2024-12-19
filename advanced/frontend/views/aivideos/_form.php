@@ -24,6 +24,8 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'Video_Link')->textInput(['maxlength' => true]) ?>
 
+    <?= $form->field($model, 'image_urls')->textInput(['maxlength' => true]) ?>
+
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
     </div>

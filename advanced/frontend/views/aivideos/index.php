@@ -1,3 +1,4 @@
+      
 <?php
 
 use yii\helpers\Html;
@@ -7,17 +8,13 @@ use yii\helpers\Url;
 /* @var $searchModel frontend\models\Aivideossearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Aivideos';
-$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="aivideos-index">
 
     <!-- Hero Section -->
-    <section class="hero-section text-center text-white" style="background-image: url('path-to-your-hero-image.jpg'); background-size: cover; background-position: center center; padding: 100px 0;">
+    <section >
         <div class="container">
-            <h1 class="display-4">Welcome to Aivideos</h1>
-            <p class="lead">Explore the latest AI videos from various platforms and learn from the best instructors.</p>
-            <?= Html::a('Browse Videos', ['#'], ['class' => 'btn btn-primary btn-lg']) ?>
+            <h1 class="display-4">欢迎来到视频资源</h1>
         </div>
     </section>
 
@@ -32,7 +29,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     <div class="position-relative">
                         <!-- Video Thumbnail -->
                         <a href="<?= Html::encode($video->Video_Link) ?>" target="_blank">
-                            <img src="<?= Html::encode($video->image) ?>" class="card-img-top thumbnail-img" alt="Video Thumbnail">
+                            <img src="<?= Html::encode($video->image_urls) ?>" class="card-img-top thumbnail-img" alt="Video Thumbnail">
                         </a>
                         
                         <!-- Duration Overlay on Image -->
@@ -70,3 +67,5 @@ $this->params['breadcrumbs'][] = $this->title;
         transform: scale(1.05); /* 鼠标悬停时略微放大 */
     }
 </style>
+
+    

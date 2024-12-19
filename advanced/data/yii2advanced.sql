@@ -11,7 +11,7 @@
  Target Server Version : 50726
  File Encoding         : 65001
 
- Date: 19/12/2024 19:57:03
+ Date: 19/12/2024 21:43:56
 */
 
 SET NAMES utf8mb4;
@@ -57,17 +57,19 @@ CREATE TABLE `ai_learning_videos`  (
   `Duration` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
   `Description` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL,
   `Video_Link` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
+  `image_urls` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
   PRIMARY KEY (`Video_ID`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 6 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 7 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of ai_learning_videos
 -- ----------------------------
-INSERT INTO `ai_learning_videos` VALUES (1, '深度学习入门 - TensorFlow与Keras', 'Andrew Ng', 'Coursera', '4小时', '本课程由Andrew Ng教授主讲，深入介绍了TensorFlow和Keras在深度学习中的应用，适合初学者。', 'https://www.bilibili.com/video/BV1gE411R7jd/?spm_id_from=333.337.search-card.all.click');
-INSERT INTO `ai_learning_videos` VALUES (2, 'PyTorch从入门到精通', 'Yann LeCun', 'YouTube', '5小时', '由PyTorch的创建者Yann LeCun主讲，详细讲解了PyTorch的基本概念和实际应用，适合具有基础知识的学习者。', 'https://www.bilibili.com/video/BV1TN411k7hT/?spm_id_from=333.337.search-card.all.click');
-INSERT INTO `ai_learning_videos` VALUES (3, '使用GPT-3进行自然语言处理', 'OpenAI Team', 'Udemy', '3小时', '介绍如何利用OpenAI GPT-3进行文本生成和自然语言处理，涵盖API的使用和最佳实践。', 'https://www.bilibili.com/video/BV1Xp4y1Y7pQ/?spm_id_from=333.337.search-card.all.click');
-INSERT INTO `ai_learning_videos` VALUES (4, '机器学习基础 - 从零开始学ML', 'Chris Olah', 'YouTube', '6小时', '本视频教程介绍了机器学习的基础概念，适合没有编程经验的初学者，涵盖了线性回归、决策树、SVM等基础算法。', 'https://www.bilibili.com/video/BV1tK4y1D7ms/?spm_id_from=333.337.search-card.all.click');
-INSERT INTO `ai_learning_videos` VALUES (5, '深度神经网络与卷积神经网络', 'Fei-Fei Li', 'Stanford Online', '7小时', 'Stanford大学的Fei-Fei Li教授主讲的深度神经网络与卷积神经网络课程，涵盖了计算机视觉和图像处理应用。', 'https://www.bilibili.com/video/BV1VV411478E/?spm_id_from=333.337.search-card.all.click');
+INSERT INTO `ai_learning_videos` VALUES (1, '深度学习入门 - TensorFlow与Keras', 'Andrew Ng', 'bilibili', '4小时', '本课程由Andrew Ng教授主讲，深入介绍了TensorFlow和Keras在深度学习中的应用，适合初学者。', 'https://www.bilibili.com/video/BV1gE411R7jd/?spm_id_from=333.337.search-card.all.click', 'http://127.0.0.1/yii-advanced-app-2.0.32/advanced/frontend/assets/img/Aivideos/keras.jpg');
+INSERT INTO `ai_learning_videos` VALUES (2, 'PyTorch从入门到精通', 'Yann LeCun', 'bilibili', '5小时', '由PyTorch的创建者Yann LeCun主讲，详细讲解了PyTorch的基本概念和实际应用，适合具有基础知识的学习者。', 'https://www.bilibili.com/video/BV1TN411k7hT/?spm_id_from=333.337.search-card.all.click', 'http://127.0.0.1/yii-advanced-app-2.0.32/advanced/frontend/assets/img/Aivideos/Pytorch.jpg');
+INSERT INTO `ai_learning_videos` VALUES (3, '使用GPT-3进行自然语言处理', 'OpenAI Team', 'bilibili', '3小时', '介绍如何利用OpenAI GPT-3进行文本生成和自然语言处理，涵盖API的使用和最佳实践。', 'https://www.bilibili.com/video/BV1Xp4y1Y7pQ/?spm_id_from=333.337.search-card.all.click', 'http://127.0.0.1/yii-advanced-app-2.0.32/advanced/frontend/assets/img/Aivideos/人工智能.jpg');
+INSERT INTO `ai_learning_videos` VALUES (4, '机器学习基础 - 从零开始学ML', 'Chris Olah', 'bilibili', '6小时', '本视频教程介绍了机器学习的基础概念，适合没有编程经验的初学者，涵盖了线性回归、决策树、SVM等基础算法。', 'https://www.bilibili.com/video/BV1tK4y1D7ms/?spm_id_from=333.337.search-card.all.click', 'http://127.0.0.1/yii-advanced-app-2.0.32/advanced/frontend/assets/img/Aivideos/机器学习.jpg');
+INSERT INTO `ai_learning_videos` VALUES (5, '深度神经网络与卷积神经网络', 'Fei-Fei Li', 'bilibili', '7小时', 'Stanford大学的Fei-Fei Li教授主讲的深度神经网络与卷积神经网络课程，涵盖了计算机视觉和图像处理应用。', 'https://www.bilibili.com/video/BV1VV411478E/?spm_id_from=333.337.search-card.all.click', 'http://127.0.0.1/yii-advanced-app-2.0.32/advanced/frontend/assets/img/Aivideos/卷积.jpg');
+INSERT INTO `ai_learning_videos` VALUES (6, 'python从入门到精通', '黑马', 'bilibili', '4小时', '本课程由黑马程序员讲解', 'https://www.bilibili.com/video/BV1qW4y1a7fU/?spm_id_from=333.337.search-card.all.click&vd_source=a8a1d56f17a9881076dcfc2f92c8ff6b', 'http://127.0.0.1/yii-advanced-app-2.0.32/advanced/frontend/assets/img/Aivideos/Python.jpg');
 
 -- ----------------------------
 -- Table structure for ai_news
@@ -368,7 +370,7 @@ CREATE TABLE `user`  (
   `password_hash` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `password_reset_token` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
   `email` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `status` smallint(6) NOT NULL DEFAULT 10,
+  `status` int(11) NULL DEFAULT 10,
   `created_at` int(11) NOT NULL,
   `updated_at` int(11) NOT NULL,
   `verification_token` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
@@ -376,11 +378,14 @@ CREATE TABLE `user`  (
   UNIQUE INDEX `username`(`username`) USING BTREE,
   UNIQUE INDEX `email`(`email`) USING BTREE,
   UNIQUE INDEX `password_reset_token`(`password_reset_token`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of user
 -- ----------------------------
 INSERT INTO `user` VALUES (1, 'asy', 'RHPwc2nPoQMr3jCTUkLGsB42bM0uJq2-', '$2y$13$f0Spw4QLUmXsGc8qWRai1OVl2lnK.3YT8msNO0KCHww5wK4WdqIUi', NULL, 'paul_040808@qq.com', 10, 1733984269, 1733984269, 'KSxyn8jBYqF_kf0eTW26cBkbTdYxDk3B_1733984269');
+INSERT INTO `user` VALUES (2, 'liu', 'KcbZ4AU1B0FyXBWW8mchr2nMyLR0KTvu', '$2y$13$eAJLSdgL7hh1NQbCThi0YOHSeaT7UMxskVoMHBLMCyrd1gasnSsSW', NULL, '1@qq.com', 10, 1734612504, 1734612504, 'pWKFqja72UWD2GWz5-f3ErjWz__PadMH_1734612504');
+INSERT INTO `user` VALUES (3, '12', 'qhFheLKTsPOm9WqMuXJPHEwwbUOkb5jg', '$2y$13$oeRhGcSaFVm6J0OLirqhpOGsJd3jOC0b5KHygMiPxmWqyx9lZj0bm', NULL, '123@QQ.COM', 9, 1734612934, 1734612934, 'GUOk1oY9Vw43xJrsATRXfmUuj_r322Vr_1734612934');
+INSERT INTO `user` VALUES (4, 'lorry', 'S161YarUovJfi0xJGJurzRDRWfcOm2ZT', '$2y$13$1ZWciX1bxkGc1ayuE5R3n.3P2E50juZO0M8oR/Jj9uTK/0TCSII5K', NULL, '1234@qq.com', 10, 1734613361, 1734613361, 'snQtgMcewtyrndcogLzUUG3Jsqob4cHg_1734613361');
 
 SET FOREIGN_KEY_CHECKS = 1;

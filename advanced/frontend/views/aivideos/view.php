@@ -36,6 +36,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'Duration',
             'Description:ntext',
             'Video_Link',
+            'image_urls',
         ],
     ]) ?>
 
