@@ -24,17 +24,17 @@ use common\widgets\Alert;
 	<meta name="author" content="" />
 
 	<link rel="stylesheet" href="font.css">
-	<link rel="stylesheet" href="assets/css/fonts/linecons/css/linecons.css">
-	<link rel="stylesheet" href="assets/css/fonts/fontawesome/css/font-awesome.min.css">
-	<link rel="stylesheet" href="assets/css/bootstrap.css">
-	<link rel="stylesheet" href="assets/css/xenon-core.css">
-	<link rel="stylesheet" href="assets/css/xenon-forms.css">
-	<link rel="stylesheet" href="assets/css/xenon-components.css">
-	<link rel="stylesheet" href="assets/css/xenon-skins.css">
-	<link rel="stylesheet" href="assets/css/custom.css">
+	<link rel="stylesheet" href="layout/assets/css/fonts/linecons/css/linecons.css">
+	<link rel="stylesheet" href="layout/assets/css/fonts/fontawesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="layout/assets/css/bootstrap.css">
+	<link rel="stylesheet" href="layout/assets/css/xenon-core.css">
+	<link rel="stylesheet" href="layout/assets/css/xenon-forms.css">
+	<link rel="stylesheet" href="layout/assets/css/xenon-components.css">
+	<link rel="stylesheet" href="layout/assets/css/xenon-skins.css">
+	<link rel="stylesheet" href="layout/assets/css/custom.css">
 	<link rel="icon" type="image/x-icon" herf="favicon.ico">
 
-	<script src="assets/js/jquery-1.11.1.min.js"></script>
+	<script src="layout/assets/js/jquery-1.11.1.min.js"></script>
 	
 </head>
 <body class="page-body">
@@ -940,23 +940,23 @@ use common\widgets\Alert;
 
 
 	<!-- Bottom Scripts -->
-	<script src="assets/js/bootstrap.min.js"></script>
-	<script src="assets/js/TweenMax.min.js"></script>
-	<script src="assets/js/resizeable.js"></script>
-	<script src="assets/js/joinable.js"></script>
-	<script src="assets/js/xenon-api.js"></script>
-	<script src="assets/js/xenon-toggles.js"></script>
+	<script src="layout/assets/js/bootstrap.min.js"></script>
+	<script src="layout/assets/js/TweenMax.min.js"></script>
+	<script src="layout/assets/js/resizeable.js"></script>
+	<script src="layout/assets/js/joinable.js"></script>
+	<script src="layout/assets/js/xenon-api.js"></script>
+	<script src="layout/assets/js/xenon-toggles.js"></script>
 
 
 	<!-- Imported scripts on this page -->
-	<script src="assets/js/xenon-widgets.js"></script>
-	<script src="assets/js/devexpress-web-14.1/js/globalize.min.js"></script>
-	<script src="assets/js/devexpress-web-14.1/js/dx.chartjs.js"></script>
-	<script src="assets/js/toastr/toastr.min.js"></script>
+	<script src="layout/assets/js/xenon-widgets.js"></script>
+	<script src="layout/assets/js/devexpress-web-14.1/js/globalize.min.js"></script>
+	<script src="layout/assets/js/devexpress-web-14.1/js/dx.chartjs.js"></script>
+	<script src="layout/assets/js/toastr/toastr.min.js"></script>
 
 
 	<!-- JavaScripts initializations and stuff -->
-	<script src="assets/js/xenon-custom.js"></script>
+	<script src="layout/assets/js/xenon-custom.js"></script>
 
 </body>
 </html>
