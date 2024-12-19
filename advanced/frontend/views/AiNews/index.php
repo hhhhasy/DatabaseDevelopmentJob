@@ -11,12 +11,7 @@ use yii\widgets\ListView;
     <title>AI 新闻中心</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Noto Sans SC', 'PingFang SC', sans-serif;
-            background: #f9f9fc;
-        }
+        
        /* Hero Section */
     .hero-section {
         display: flex;

@@ -30,17 +30,27 @@ AppAsset::register($this);
     <!-- CSS 内嵌样式 -->
     <style>
         /* 页面背景 */
+
         body {
-            
-           
-            background: linear-gradient(to bottom right, #0D3876, #1576C7, #4DA8DA); /* 深蓝到浅蓝的渐变 */
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            font-family: 'Roboto', sans-serif;
-            color: #333;
-            margin: 0;
-            padding: 0;
+        margin: 0;
+        height: 100vh;
+        background: linear-gradient(-45deg, #dae, #f66, #3c9, #09f, #66f);
+        background-size: 200% 200%;
+        animation: gradient 8s ease infinite;
         }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0 12%;
+            }
+            50% {
+                background-position: 100% 100%;
+            }
+            100% {
+                background-position: 0 12%;
+            }
+        }
+        
 
         /* 导航栏 */
         .navbar-inverse {

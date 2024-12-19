@@ -16,14 +16,24 @@ $this->title = 'AI Innovation Platform';
     <style>
         /* 设置页面的基本字体 */
         body {
-            background: linear-gradient(to bottom right, #0D3876, #1576C7, #4DA8DA); /* 深蓝到浅蓝的渐变 */
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            font-family: 'Roboto', sans-serif;
-            color: #333;
-            margin: 0;
-            padding: 0;
-       }
+        margin: 0;
+        height: 100vh;
+        background: linear-gradient(-45deg, #dae, #f66, #3c9, #09f, #66f);
+        background-size: 200% 200%;
+        animation: gradient 8s ease infinite;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0 12%;
+            }
+            50% {
+                background-position: 100% 100%;
+            }
+            100% {
+                background-position: 0 12%;
+            }
+        }
  
        /* 英雄部分样式 */
       .hero-section {
@@ -543,9 +553,10 @@ $this->title = 'AI Innovation Platform';
             <div style="flex: 1; min-width: 250px; margin-bottom: 20px;">
             <img src="http://127.0.0.1/yii-advanced-app-2.0.32/advanced/frontend/assets/Logo.jpg" alt="Logo" style="max-width: 120px; margin-bottom: 20px;">
                 <p style="font-size: 14px; opacity: 0.7;color: #ffffff; ">2024 AI创新平台</p>
-                <button style="background-color: #00aaff; border: none; color: white; padding: 12px 25px; font-size: 16px; border-radius: 8px; cursor: pointer; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); transition: background-color 0.3s ease-in-out;">
-                    提供建议
-                </button>
+                <a href="http://127.0.0.1/yii-advanced-app-2.0.32/advanced/frontend/web/index.php?r=suggestions%2Fcreate" style="background-color: #00aaff; border: none; color: white; padding: 12px 25px; font-size: 16px; border-radius: 8px; cursor: pointer; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); text-decoration: none; display: inline-block; transition: background-color 0.3s ease-in-out;">
+                提供建议
+                </a>
+
             </div>
 
             <!-- Navigation Section -->
@@ -594,7 +605,6 @@ $this->title = 'AI Innovation Platform';
                     </a>
                 </div>
             </div>
-
             
         </div>
 
