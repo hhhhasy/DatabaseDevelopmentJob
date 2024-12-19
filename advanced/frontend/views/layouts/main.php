@@ -32,11 +32,10 @@ AppAsset::register($this);
         /* 页面背景 */
         body {
             
-            background: #007BFF; /* 蓝色背景 */
-            background-size: cover;
+           
+            background: linear-gradient(to bottom right, #0D3876, #1576C7, #4DA8DA); /* 深蓝到浅蓝的渐变 */
             background-repeat: no-repeat;
             background-attachment: fixed;
-            background-position: center center;
             font-family: 'Roboto', sans-serif;
             color: #333;
             margin: 0;
@@ -137,19 +136,19 @@ AppAsset::register($this);
         ],
     ]);
     $menuItems = [
-        ['label' => 'Home', 'url' => ['/site/index']],
-        ['label' => 'About', 'url' => ['/site/about']],
-        ['label' => 'Contact', 'url' => ['/site/contact']],
-        ['label' => 'Applications', 'url' => ['/app/index']],
+        ['label' => '首页', 'url' => ['/site/index']],
+        // ['label' => 'About', 'url' => ['/site/about']],
+        // ['label' => 'Contact', 'url' => ['/site/contact']],
+        ['label' => '应用', 'url' => ['/app/index']],
         [
-            'label' => 'Resource',
+            'label' => '资源',
             'items' => [
-                ['label' => 'Tools', 'url' => ['/aitools/index']],
-                ['label' => 'Videos', 'url' => ['/aivideos/index']],
+                ['label' => '工具', 'url' => ['/aitools/index']],
+                ['label' => '视频', 'url' => ['/aivideos/index']],
             ],
         ],
-        ['label' => 'News', 'url' => ['/abnews/index']],
-        ['label' => 'Technology', 'url' => ['/aitechnology/index']]
+        ['label' => '新闻', 'url' => ['/abnews/index']],
+        ['label' => '技术', 'url' => ['/aitechnology/index']]
     ];
     
     if (Yii::$app->user->isGuest) {
@@ -182,12 +181,6 @@ AppAsset::register($this);
     </div>
 </div>
 
-<footer class="footer">
-    <div class="container">
-        <p class="pull-left">&copy; <?= Html::encode(Yii::$app->name) ?> <?= date('Y') ?></p>
-        <p class="pull-right"><?= Yii::powered() ?></p>
-    </div>
-</footer>
 
 <?php $this->endBody() ?>
 </body>
