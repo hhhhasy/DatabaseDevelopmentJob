@@ -195,6 +195,13 @@ use common\widgets\Alert;
 							<span class="title">成员管理</span>
 						</a>
 					</li>
+
+					<li>
+						<a href="index.php?r=news">
+							<i class="linecons-star"></i>
+							<span class="title">新闻管理</span>
+						</a>
+					</li>
 					
 				</ul>
 						
