@@ -7,9 +7,6 @@ use yii\helpers\Url;
 /* @var $model frontend\models\Aitechnology */
 /* @var $relatedTechnologies frontend\models\Aitechnology[] */
 
-$this->title = $model->tech_name;
-$this->params['breadcrumbs'][] = ['label' => 'Artificial Intelligence Technologies', 'url' => ['index']];
-$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="aitechnology-view">
 
