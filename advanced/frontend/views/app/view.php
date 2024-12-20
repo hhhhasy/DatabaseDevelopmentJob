@@ -41,17 +41,7 @@ use yii\widgets\DetailView;
         </div>
     <?php endif; ?>
 
-    <!-- 操作按钮 -->
-    <p class="action-buttons">
-        <?= Html::a('Update', ['update', 'id' => $model->application_id], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'id' => $model->application_id], [
-            'class' => 'btn btn-danger',
-            'data' => [
-                'confirm' => 'Are you sure you want to delete this item?',
-                'method' => 'post',
-            ],
-        ]) ?>
-    </p>
+
 </div>
 
 <!-- CSS 样式 -->

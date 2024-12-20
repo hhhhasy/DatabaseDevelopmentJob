@@ -1,17 +1,17 @@
 /*
- Navicat MySQL Data Transfer
+ Navicat Premium Data Transfer
 
- Source Server         : localhost
+ Source Server         : new_new
  Source Server Type    : MySQL
- Source Server Version : 50726
+ Source Server Version : 100432
  Source Host           : localhost:3306
- Source Schema         : yii2advanced
+ Source Schema         : yii2
 
  Target Server Type    : MySQL
- Target Server Version : 50726
+ Target Server Version : 100432
  File Encoding         : 65001
 
- Date: 20/12/2024 18:24:16
+ Date: 20/12/2024 19:36:24
 */
 
 SET NAMES utf8mb4;
@@ -22,28 +22,27 @@ SET FOREIGN_KEY_CHECKS = 0;
 -- ----------------------------
 DROP TABLE IF EXISTS `ai_algorithm`;
 CREATE TABLE `ai_algorithm`  (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `description` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL,
   `example_image` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
-  `animation` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 5 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 6 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of ai_algorithm
 -- ----------------------------
-INSERT INTO `ai_algorithm` VALUES (1, '卷积', '卷积是一种核心技术，常用于图像处理和特征提取。', 'http://127.0.0.1/yii-advanced-app-2.0.32/advanced/frontend/assets/img/algorithm/2.jpg', NULL);
-INSERT INTO `ai_algorithm` VALUES (2, '聚类', '聚类是一种无监督学习方法，用于将数据分组。', 'http://127.0.0.1/yii-advanced-app-2.0.32/advanced/frontend/assets/img/algorithm/1.png', NULL);
-INSERT INTO `ai_algorithm` VALUES (3, '决策树', '决策树是一种解释性强的分类和回归方法。', 'http://127.0.0.1/yii-advanced-app-2.0.32/advanced/frontend/assets/img/algorithm/3.png', NULL);
-INSERT INTO `ai_algorithm` VALUES (4, '主成分分析', '主成分分析是一种降维技术，用于高维数据的可视化和简化。', 'http://127.0.0.1/yii-advanced-app-2.0.32/advanced/frontend/assets/img/algorithm/4.png', NULL);
+INSERT INTO `ai_algorithm` VALUES (2, '卷积', '卷积是一种核心技术，常用于图像处理和特征提取。', 'http://127.0.0.1/yii-advanced-app-2.0.32/advanced/frontend/assets/img/algorithm/2.jpg');
+INSERT INTO `ai_algorithm` VALUES (1, '聚类', '聚类是一种无监督学习方法，用于将数据分组。', 'http://127.0.0.1/yii-advanced-app-2.0.32/advanced/frontend/assets/img/algorithm/1.png');
+INSERT INTO `ai_algorithm` VALUES (3, '决策树', '决策树是一种解释性强的分类和回归方法。', 'http://127.0.0.1/yii-advanced-app-2.0.32/advanced/frontend/assets/img/algorithm/3.png');
+INSERT INTO `ai_algorithm` VALUES (4, '主成分分析', '主成分分析是一种降维技术，用于高维数据的可视化和简化。', 'http://127.0.0.1/yii-advanced-app-2.0.32/advanced/frontend/assets/img/algorithm/4.png');
 
 -- ----------------------------
 -- Table structure for ai_applications
 -- ----------------------------
 DROP TABLE IF EXISTS `ai_applications`;
 CREATE TABLE `ai_applications`  (
-  `application_id` int(11) NOT NULL AUTO_INCREMENT,
+  `application_id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
   `category` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
@@ -71,7 +70,7 @@ INSERT INTO `ai_applications` VALUES (10, '智能制造', 'AI技术在制造业�
 -- ----------------------------
 DROP TABLE IF EXISTS `ai_learning_videos`;
 CREATE TABLE `ai_learning_videos`  (
-  `Video_ID` int(11) NOT NULL AUTO_INCREMENT,
+  `Video_ID` int NOT NULL AUTO_INCREMENT,
   `Title` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `Instructor` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `Platform` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
@@ -80,7 +79,7 @@ CREATE TABLE `ai_learning_videos`  (
   `Video_Link` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
   `image_urls` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
   PRIMARY KEY (`Video_ID`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 7 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 7 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of ai_learning_videos
@@ -97,17 +96,17 @@ INSERT INTO `ai_learning_videos` VALUES (6, 'python从入门到精通', '黑马'
 -- ----------------------------
 DROP TABLE IF EXISTS `ai_news`;
 CREATE TABLE `ai_news`  (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int NOT NULL AUTO_INCREMENT,
   `title` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `content` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `author` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
-  `published_at` datetime(0) NULL DEFAULT CURRENT_TIMESTAMP(0),
+  `published_at` datetime NULL DEFAULT current_timestamp,
   `source` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
   `tags` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
   `image_url` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
   `status` enum('draft','published','archived') CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT 'draft',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 20 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 20 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of ai_news
@@ -126,13 +125,13 @@ INSERT INTO `ai_news` VALUES (19, 'AI在游戏行业的深度应用', '游戏开
 -- ----------------------------
 DROP TABLE IF EXISTS `ai_technology`;
 CREATE TABLE `ai_technology`  (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int NOT NULL AUTO_INCREMENT,
   `tech_name` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `description` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL,
   `application_area` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
-  `created_at` timestamp(0) NOT NULL DEFAULT CURRENT_TIMESTAMP(0),
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 14 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 14 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of ai_technology
@@ -149,14 +148,14 @@ INSERT INTO `ai_technology` VALUES (13, '专家系统', '专家系统是模拟�
 -- ----------------------------
 DROP TABLE IF EXISTS `ai_tools`;
 CREATE TABLE `ai_tools`  (
-  `Tool_ID` int(11) NOT NULL AUTO_INCREMENT,
+  `Tool_ID` int NOT NULL AUTO_INCREMENT,
   `Tool_Name` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `Tool_Type` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `Description` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL,
   `Official_Link` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
   `image_url` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
   PRIMARY KEY (`Tool_ID`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 9 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 9 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of ai_tools
@@ -175,13 +174,13 @@ INSERT INTO `ai_tools` VALUES (8, 'NumPy', '科学计算库 (SC)', 'NumPy是一�
 -- ----------------------------
 DROP TABLE IF EXISTS `comments`;
 CREATE TABLE `comments`  (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int NOT NULL AUTO_INCREMENT,
   `tech_name` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `comment` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `created_at` timestamp(0) NOT NULL DEFAULT CURRENT_TIMESTAMP(0),
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp,
   `author_name` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL DEFAULT 'Anonymous' COMMENT 'Comment Author Name',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 108 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 108 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of comments
@@ -300,9 +299,9 @@ INSERT INTO `comments` VALUES (107, '计算机视觉', '计算机视觉的未来
 DROP TABLE IF EXISTS `migration`;
 CREATE TABLE `migration`  (
   `version` varchar(180) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `apply_time` int(11) NULL DEFAULT NULL,
+  `apply_time` int NULL DEFAULT NULL,
   PRIMARY KEY (`version`) USING BTREE
-) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of migration
@@ -317,9 +316,9 @@ INSERT INTO `migration` VALUES ('m241117_142413_Ainews', 1731853544);
 -- ----------------------------
 DROP TABLE IF EXISTS `news`;
 CREATE TABLE `news`  (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int NOT NULL AUTO_INCREMENT,
   `title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `publish_time` datetime(0) NOT NULL,
+  `publish_time` datetime NOT NULL,
   `content` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `tags` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `image_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
@@ -345,10 +344,10 @@ INSERT INTO `news` VALUES (10, '苹果Apple Intelligence全新升级 与ChatGPT�
 -- ----------------------------
 DROP TABLE IF EXISTS `suggestions`;
 CREATE TABLE `suggestions`  (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int NOT NULL AUTO_INCREMENT,
   `suggestion` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 5 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 5 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of suggestions
@@ -363,15 +362,15 @@ INSERT INTO `suggestions` VALUES (4, '123');
 -- ----------------------------
 DROP TABLE IF EXISTS `team_members`;
 CREATE TABLE `team_members`  (
-  `member_id` int(11) NOT NULL AUTO_INCREMENT,
+  `member_id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `age` int(11) NOT NULL,
+  `age` int NOT NULL,
   `major` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `province` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
   `description` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL,
   `image_url` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
   PRIMARY KEY (`member_id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 5 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 5 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of team_members
@@ -385,21 +384,21 @@ INSERT INTO `team_members` VALUES (3, 'Wang', 20, '密码学', '河北', '阳光
 -- ----------------------------
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user`  (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int NOT NULL AUTO_INCREMENT,
   `username` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `auth_key` varchar(32) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `password_hash` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `password_reset_token` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
   `email` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `status` int(11) NULL DEFAULT 10,
-  `created_at` int(11) NOT NULL,
-  `updated_at` int(11) NOT NULL,
+  `status` int NULL DEFAULT 10,
+  `created_at` int NOT NULL,
+  `updated_at` int NOT NULL,
   `verification_token` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE,
-  UNIQUE INDEX `username`(`username`) USING BTREE,
-  UNIQUE INDEX `email`(`email`) USING BTREE,
-  UNIQUE INDEX `password_reset_token`(`password_reset_token`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
+  UNIQUE INDEX `username`(`username` ASC) USING BTREE,
+  UNIQUE INDEX `email`(`email` ASC) USING BTREE,
+  UNIQUE INDEX `password_reset_token`(`password_reset_token` ASC) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of user

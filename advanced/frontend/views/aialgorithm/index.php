@@ -143,6 +143,7 @@ p {
 }
 </style>
 
+
 <script>
 document.addEventListener('DOMContentLoaded', function () {
     const starsContainer = document.querySelector('.stars');

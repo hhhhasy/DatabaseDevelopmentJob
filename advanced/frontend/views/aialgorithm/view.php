@@ -1,11 +1,9 @@
 <?php
 
 use yii\helpers\Html;
-use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
 /* @var $model frontend\models\Aialgorithm */
-
 
 \yii\web\YiiAsset::register($this);
 ?>
@@ -14,12 +12,6 @@ use yii\widgets\DetailView;
     <!-- 应用标题 -->
     <h1 class="aialgorithm-title"><?= Html::encode($this->title) ?></h1>
 
-    <!-- 元信息 -->
-    <p class="metadata">
-        Algorithm ID: <span class="aialgorithm-id"><?= Html::encode($model->id) ?></span> |
-        Description: <span class="aialgorithm-description"><?= Html::encode($model->description) ?></span>
-    </p>
-
     <!-- 示例图片 -->
     <?php if (!empty($model->example_image)): ?>
         <div class="aialgorithm-image-container">
@@ -27,31 +19,12 @@ use yii\widgets\DetailView;
         </div>
     <?php endif; ?>
 
-    <!-- 操作按钮 -->
-    <p class="action-buttons">
-        <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'id' => $model->id], [
-            'class' => 'btn btn-danger',
-            'data' => [
-                'confirm' => 'Are you sure you want to delete this item?',
-                'method' => 'post',
-            ],
-        ]) ?>
-    </p>
+    <!-- 详细描述 -->
+    <div class="aialgorithm-details">
+        <p><strong>名称：</strong> <?= Html::encode($model->name) ?></p>
+        <p><strong>描述：</strong> <?= Html::encode($model->description) ?></p>
+    </div>
 
-    <!-- 详情视图 -->
-    <?= DetailView::widget([
-        'model' => $model,
-        'attributes' => [
-            'id',
-            'name',
-            [
-                'attribute' => 'description',
-                'format' => 'ntext',
-            ],
-            'example_image',
-        ],
-    ]) ?>
 </div>
 
 <!-- CSS 样式 -->
@@ -68,12 +41,6 @@ use yii\widgets\DetailView;
     margin-bottom: 10px;
 }
 
-.metadata {
-    font-size: 14px;
-    color: #555;
-    margin-bottom: 20px;
-}
-
 .aialgorithm-image-container {
     text-align: left;
     margin-bottom: 20px;
@@ -86,16 +53,13 @@ use yii\widgets\DetailView;
     border-radius: 8px;
 }
 
-.action-buttons {
-    margin-top: 20px;
-    text-align: left;
+.aialgorithm-details {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
 }
 
-.action-buttons .btn {
-    padding: 10px 20px;
-    font-size: 14px;
-    text-transform: uppercase;
-    margin-right: 10px;
-    border-radius: 5px;
+.aialgorithm-details p {
+    margin: 10px 0;
 }
 </style>
