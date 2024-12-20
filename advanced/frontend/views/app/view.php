@@ -6,9 +6,7 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model frontend\models\app */
 
-$this->title = $model->name;
-$this->params['breadcrumbs'][] = ['label' => 'Apps', 'url' => ['index']];
-$this->params['breadcrumbs'][] = $this->title;
+
 \yii\web\YiiAsset::register($this);
 ?>
 <div class="app-view">

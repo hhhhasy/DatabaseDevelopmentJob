@@ -11,11 +11,32 @@
  Target Server Version : 50726
  File Encoding         : 65001
 
- Date: 19/12/2024 21:43:56
+ Date: 20/12/2024 18:24:16
 */
 
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
+
+-- ----------------------------
+-- Table structure for ai_algorithm
+-- ----------------------------
+DROP TABLE IF EXISTS `ai_algorithm`;
+CREATE TABLE `ai_algorithm`  (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `description` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL,
+  `example_image` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
+  `animation` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = MyISAM AUTO_INCREMENT = 5 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of ai_algorithm
+-- ----------------------------
+INSERT INTO `ai_algorithm` VALUES (1, '卷积', '卷积是一种核心技术，常用于图像处理和特征提取。', 'http://127.0.0.1/yii-advanced-app-2.0.32/advanced/frontend/assets/img/algorithm/2.jpg', NULL);
+INSERT INTO `ai_algorithm` VALUES (2, '聚类', '聚类是一种无监督学习方法，用于将数据分组。', 'http://127.0.0.1/yii-advanced-app-2.0.32/advanced/frontend/assets/img/algorithm/1.png', NULL);
+INSERT INTO `ai_algorithm` VALUES (3, '决策树', '决策树是一种解释性强的分类和回归方法。', 'http://127.0.0.1/yii-advanced-app-2.0.32/advanced/frontend/assets/img/algorithm/3.png', NULL);
+INSERT INTO `ai_algorithm` VALUES (4, '主成分分析', '主成分分析是一种降维技术，用于高维数据的可视化和简化。', 'http://127.0.0.1/yii-advanced-app-2.0.32/advanced/frontend/assets/img/algorithm/4.png', NULL);
 
 -- ----------------------------
 -- Table structure for ai_applications

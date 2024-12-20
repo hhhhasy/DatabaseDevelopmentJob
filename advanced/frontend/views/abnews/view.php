@@ -6,11 +6,7 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model frontend\models\abnews */
 
-// 设置页面标题为新闻模型中的标题
-$this->title = $model->title;
-// 添加面包屑导航，先添加 'Abnews' 作为首页链接，再添加当前新闻标题
-$this->params['breadcrumbs'][] = ['label' => 'Abnews', 'url' => ['index']];
-$this->params['breadcrumbs'][] = $this->title;
+
 // 注册 Yii 框架的资源文件
 \yii\web\YiiAsset::register($this);
 ?>

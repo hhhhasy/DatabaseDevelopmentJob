@@ -5,8 +5,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'AI Tools Overview';
-$this->params['breadcrumbs'][] = $this->title;
+
 ?>
 <div class="aitools-index" id="aitools-scroll-container">
     <!-- Hero Section -->

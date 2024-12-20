@@ -7,8 +7,6 @@ use yii\grid\GridView;
 /* @var $searchModel frontend\models\Suggestionssrssearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Suggestions';
-$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="suggestions-index">
 

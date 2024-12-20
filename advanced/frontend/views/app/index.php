@@ -3,8 +3,7 @@
 use yii\helpers\Html;
 use yii\widgets\ListView;
 
-$this->title = 'Applications';
-$this->params['breadcrumbs'][] = $this->title;
+
 
 ?>
 <div class="application-index" style="font-family: 'Noto Sans SC', 'PingFang SC', sans-serif; background: #f9f9fc; padding: 40px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">

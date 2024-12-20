@@ -6,9 +6,7 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model frontend\models\Aitools */
 
-$this->title = $model->Tool_ID;
-$this->params['breadcrumbs'][] = ['label' => 'Aitools', 'url' => ['index']];
-$this->params['breadcrumbs'][] = $this->title;
+
 \yii\web\YiiAsset::register($this);
 ?>
 <div class="aitools-view">

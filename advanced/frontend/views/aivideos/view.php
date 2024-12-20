@@ -6,9 +6,6 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model frontend\models\Aivideos */
 
-$this->title = $model->Title;
-$this->params['breadcrumbs'][] = ['label' => 'Aivideos', 'url' => ['index']];
-$this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>
 <div class="aivideos-view">

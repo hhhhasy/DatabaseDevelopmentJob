@@ -6,9 +6,7 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model frontend\models\Suggestions */
 
-$this->title = $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Suggestions', 'url' => ['index']];
-$this->params['breadcrumbs'][] = $this->title;
+
 \yii\web\YiiAsset::register($this);
 ?>
 <div class="suggestions-view">
