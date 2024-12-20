@@ -74,33 +74,33 @@ use common\widgets\Alert;
 						</a>
 						<ul>
 							<li>
-								<a href="data/team/404NotFound_需求文档(2012411_2013622_2011068_1911573).pdf">
-									<span class="title">404NotFound_需求文档</span>
+								<a href="http://127.0.0.1/yii-advanced-app-2.0.32/advanced/data/teamwork/AI很费劲_需求文档(2213605_2210737_2210529).pdf">
+									<span class="title">AI很费劲_需求文档</span>
 								</a>
 							</li>
 							<li>
-								<a href="data/team/404NotFound_设计文档(2012411_2013622_2011068_1911573).pdf">
-									<span class="title">404NotFound_设计文档</span>
+								<a href="http://127.0.0.1/yii-advanced-app-2.0.32/advanced/data/teamwork/AI很费劲_设计文档(2213605_2210737_2210529).pdf">
+									<span class="title">AI很费劲_设计文档</span>
 								</a>
 							</li>
 							<li>
-								<a href="data/team/404NotFound_实现文档(2012411_2013622_2011068_1911573).pdf">
-									<span class="title">404NotFound_实现文档</span>
+								<a href="http://127.0.0.1/yii-advanced-app-2.0.32/advanced/data/teamwork/AI很费劲_实现文档(2213605_2210737_2210529).pdf">
+									<span class="title">AI很费劲_实现文档</span>
 								</a>
 							</li>
 							<li>
-								<a href="data/team/404NotFound_用户手册(2012411_2013622_2011068_1911573).pdf">
-									<span class="title">404NotFound_用户手册</span>
+								<a href="http://127.0.0.1/yii-advanced-app-2.0.32/advanced/data/teamwork/AI很费劲_用户手册(2213605_2210737_2210529).pdf">
+									<span class="title">AI很费劲_用户手册</span>
 								</a>
 							</li>
 							<li>
-								<a href="data/team/404NotFound_部署文档(2012411_2013622_2011068_1911573).pdf">
-									<span class="title">404NotFound_部署文档</span>
+								<a href="http://127.0.0.1/yii-advanced-app-2.0.32/advanced/data/teamwork/AI很费劲_部署文档(2213605_2210737_2210529).pdf">
+									<span class="title">AI很费劲_部署文档</span>
 								</a>
 							</li>
 							<li>
-								<a href="data/team/404NotFound_项目展示(2012411_2013622_2011068_1911573).pptx">
-									<span class="title">404NotFound_项目展示PPT</span>
+								<a href="http://127.0.0.1/yii-advanced-app-2.0.32/advanced/data/teamwork/AI很费劲_项目展示(2213605_2210737_2210529).pptx">
+									<span class="title">AI很费劲_项目展示PPT</span>
 								</a>
 							</li>
 						</ul>
@@ -112,23 +112,18 @@ use common\widgets\Alert;
 						</a>
 						<ul>
 						<li>
-								<a href="data/personal/作业1(2013622_罗昕珂).zip">
-									<span class="title">罗昕珂(2013622) </span>
+								<a href="http://127.0.0.1/yii-advanced-app-2.0.32/advanced/data/personalwork/作业1(2210529_罗瑞).pdf">
+									<span class="title">罗瑞-2210529</span>
 								</a>
 							</li>
 							<li>
-								<a href="data/personal/作业1(2011068_苏雨佳).zip">
-									<span class="title">苏雨佳(2011068)</span>
+								<a href="http://127.0.0.1/yii-advanced-app-2.0.32/advanced/data/personalwork/作业1(2210737_阿斯雅).pdf">
+									<span class="title">阿斯雅-2210737</span>
 								</a>
 							</li>
 							<li>
-								<a href="data/personal/作业1(2012411_卻铭恺).zip">
-									<span class="title">卻铭恺(2012411)</span>
-								</a>
-							</li>
-							<li>
-								<a href="data/personal/作业1(1911573_王一如).zip">
-									<span class="title">王一如(1911573)</span>
+								<a href="http://127.0.0.1/yii-advanced-app-2.0.32/advanced/data/personalwork/作业1(2213605_刘忠旺).pdf">
+									<span class="title">刘忠旺-2213605</span>
 								</a>
 							</li>
 						</ul>
@@ -140,23 +135,18 @@ use common\widgets\Alert;
 						</a>
 						<ul>
 							<li>
-								<a href="data/personal/作业2(2013622_罗昕珂).zip">
-									<span class="title">罗昕珂(2013622) </span>
+								<a href="http://127.0.0.1/yii-advanced-app-2.0.32/advanced/data/personalwork/作业2(2210529_罗瑞).pdf">
+									<span class="title">罗瑞-2210529</span>
 								</a>
 							</li>
 							<li>
-								<a href="data/personal/作业2(2011068_苏雨佳).zip">
-									<span class="title">苏雨佳(2011068)</span>
+								<a href="http://127.0.0.1/yii-advanced-app-2.0.32/advanced/data/personalwork/作业2(2210737_阿斯雅).pdf">
+									<span class="title">阿斯雅-2210737</span>
 								</a>
 							</li>
 							<li>
-								<a href="data/personal/作业2(2012411_卻铭恺).zip">
-									<span class="title">卻铭恺(2012411)</span>
-								</a>
-							</li>
-							<li>
-								<a href="data/personal/作业2(1911573_王一如).zip">
-									<span class="title">王一如(1911573)</span>
+								<a href="http://127.0.0.1/yii-advanced-app-2.0.32/advanced/data/personalwork/作业2(2213605_刘忠旺).pdf">
+									<span class="title">刘忠旺-2213605</span>
 								</a>
 							</li>
 						</ul>
@@ -168,23 +158,18 @@ use common\widgets\Alert;
 						</a>
 						<ul>
 						<li>
-								<a href="data/personal/作业3(2013622_罗昕珂).zip">
-									<span class="title">罗昕珂(2013622) </span>
+								<a href="http://127.0.0.1/yii-advanced-app-2.0.32/advanced/data/personalwork/作业3(2210529_罗瑞).pdf">
+									<span class="title">罗瑞-2210529</span>
 								</a>
 							</li>
 							<li>
-								<a href="data/personal/作业3(2011068_苏雨佳).zip">
-									<span class="title">苏雨佳(2011068)</span>
+								<a href="http://127.0.0.1/yii-advanced-app-2.0.32/advanced/data/personalwork/作业3(2210737_阿斯雅).pdf">
+									<span class="title">阿斯雅-2210737</span>
 								</a>
 							</li>
 							<li>
-								<a href="data/personal/作业3(2012411_卻铭恺).zip">
-									<span class="title">卻铭恺(2012411)</span>
-								</a>
-							</li>
-							<li>
-								<a href="data/personal/作业3(1911573_王一如).zip">
-									<span class="title">王一如(1911573)</span>
+								<a href="http://127.0.0.1/yii-advanced-app-2.0.32/advanced/data/personalwork/作业3(2213605_刘忠旺).pdf">
+									<span class="title">刘忠旺-2213605</span>
 								</a>
 							</li>
 						</ul>
