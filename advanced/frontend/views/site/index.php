@@ -38,7 +38,6 @@ $this->title = 'AI Innovation Platform';
        /* 英雄部分样式 */
       .hero-section {
             position: relative;
-            background-image: url('http://127.0.0.1/yii-advanced-app-2.0.32/advanced/frontend/assets/img/home/AI.jpg');
             background-size: cover;
             background-position: center;
             height: 100vh;
@@ -274,17 +273,25 @@ $this->title = 'AI Innovation Platform';
     <!-- Hero Section with Background Image -->
     <div class="hero-section" style="position: relative; height: 100vh; display: flex; justify-content: center; align-items: center; padding: 20px;">
         <!-- Background Video -->
-        <video autoplay muted loop style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
-            <source src="http://127.0.0.1/yii-advanced-app-2.0.32/advanced/frontend/assets/AI.mp4" type="video/mp4">
-        </video>
+        
 
         <!-- Title Text on the Left Side -->
         <!-- Centered Text -->
-        <div class="text-container" style="background: rgba(0, 0, 0, 0.5); padding: 30px; border-radius: 10px; max-width: 400px; text-align: center;">
-            <h1 style="font-size: 48px; color: #ffcc00; font-weight: bold; margin-bottom: 20px;">AI改变世界</h1>
-            <p class="lead" style="font-size: 20px; color: white;">欢迎来到该平台</p>
-            <a class="btn btn-lg btn-primary" href="#about-section" style="background: #ff6600; border: none; padding: 15px 40px; font-size: 18px; text-transform: uppercase; border-radius: 5px; color: white;">Learn More</a>
+        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 20px; text-align: center;">
+            <div style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+                <h1 style="font-size: 120px; color: #ffffff; font-weight: bold; text-shadow: 3px 3px 10px rgba(255, 204, 0, 0.7), 0 0 20px rgba(255, 255, 255, 0.5); font-family: 'Orbitron', sans-serif; margin: 0;">
+                    AI
+                </h1>
+                <h1 style="font-size: 120px; color: #ffcc00; font-weight: bold; text-shadow: 3px 3px 10px rgba(255, 204, 0, 0.7), 0 0 20px rgba(255, 255, 255, 0.5); font-family: 'Orbitron', sans-serif; margin: 0;">
+                    改变世界
+                </h1>
+            </div>
+            <a class="btn btn-lg btn-primary" href="#about-section" style="background: linear-gradient(45deg, #ff6600, #ff4500); border: none; padding: 15px 50px; font-size: 20px; text-transform: uppercase; border-radius: 8px; color: white; text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3); transition: transform 0.2s, box-shadow 0.2s;">
+                Learn More
+            </a>
         </div>
+
+
     </div>
 
 
@@ -482,7 +489,7 @@ $this->title = 'AI Innovation Platform';
                     </p>
                 </div>
             </div>
-            <<div id="tab4" class="tab-content" style="display: none;">
+            <div id="tab4" class="tab-content" style="display: none;">
                 <div class="advantage-box" style="border-radius: 5px; box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); padding: 20px; width: 100%; text-align: center;">
                     <i class="fa fa-lock" style="font-size: 32px; color: #DC3545; margin-bottom: 10px;"></i>
                     <h2 style="color: #0D3876; font-size: 26px; font-weight: bold; margin: 10px 0;">安全保障</h2>
