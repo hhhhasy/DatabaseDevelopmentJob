@@ -1,14 +1,37 @@
-      
 <?php
-
+/* 
+ * Team:AI很费劲
+ * Coding by 刘忠旺 2213605
+ *                   阿斯雅 2210737
+ *                   罗瑞     2210529
+ *                   2024/12/13
+ * AI 视频资源页面
+ *
+ * 该视图文件展示了视频资源的首页。它使用 Yii 框架提供的 `ActiveDataProvider` 动态加载视频数据，并以卡片式布局展示视频的缩略图、时长和标题。用户可以点击缩略图跳转到视频的观看页面。
+ * 
+ * 主要功能：
+ * 1. 显示欢迎信息 (Hero Section)。
+ * 2. 展示视频资源列表，包括视频的缩略图、时长、标题以及指向视频链接的按钮。
+ * 3. 使用 Bootstrap 的卡片式组件 (Card) 来布局视频项。
+ * 
+ * 设计特点：
+ * - 响应式设计，支持不同设备上的适配。
+ * - 视频缩略图使用 `object-fit: cover` 保持纵横比并裁剪超出部分。
+ * - 在鼠标悬停时，图片会有平滑的缩放效果。
+ * 
+ * 依赖：
+ * 1. Yii2 框架，用于数据传输和渲染视图。
+ * 2. Bootstrap 用于响应式布局和卡片组件。
+ * 
+ * @var $this yii\web\View 页面视图对象
+ * @var $searchModel frontend\models\Aivideossearch 搜索模型
+ * @var $dataProvider yii\data\ActiveDataProvider 数据提供者，加载视频资源
+ * 
+ */
 use yii\helpers\Html;
 use yii\helpers\Url;
-
-/* @var $this yii\web\View */
-/* @var $searchModel frontend\models\Aivideossearch */
-/* @var $dataProvider yii\data\ActiveDataProvider */
-
 ?>
+
 <div class="aivideos-index">
 
     <!-- Hero Section -->
