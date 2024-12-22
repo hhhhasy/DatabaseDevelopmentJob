@@ -1,8 +1,27 @@
 <?php
 
-/* @var $this yii\web\View */
-/* @var $form yii\bootstrap\ActiveForm */
-/* @var $model \frontend\models\SignupForm */
+/* 
+ * Team:AI很费劲
+ * Coding by 刘忠旺 2213605
+ *                   阿斯雅 2210737
+ *                   罗瑞     2210529
+ *                   2024/12/19
+ * 这是一个用户注册页面的视图文件，使用Yii2框架开发。
+ * 页面包含一个注册表单，允许用户输入用户名、邮箱和密码，并提交注册信息。
+ * 页面背景使用了一张图片，并且使用了一些CSS样式来优化表单的外观。
+ *
+ * 主要功能：
+ * - 显示注册表单，用户可以输入其基本信息（用户名、邮箱、密码）。
+ * - 提交注册表单信息至后台进行处理。
+ *
+ * 视图文件通过Yii2的ActiveForm和Html助手类生成HTML表单，并为每个表单字段指定了适当的输入类型和样式。
+ * 表单提交按钮使用Bootstrap样式，使其外观更加美观和一致。
+ * 页面背景使用了CSS来设置背景图片，并且确保表单在页面中居中显示，提供良好的用户体验。
+ *
+ * @var $this yii\web\View             当前视图对象
+ * @var $form yii\bootstrap\ActiveForm 当前表单对象
+ * @var $model \frontend\models\SignupForm 注册表单模型对象
+ */
 
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
