@@ -2,7 +2,12 @@
 
 
 <?php
-
+/* 
+ * Team:AI很费劲
+ * Coding by 阿斯雅 2210737
+ * 2024/12/16
+ * 后台模板
+ */
 use backend\assets\AppAsset;
 use yii\helpers\Html;
 use yii\bootstrap\Nav;
@@ -74,32 +79,32 @@ use common\widgets\Alert;
 						</a>
 						<ul>
 							<li>
-								<a href="http://127.0.0.1/yii-advanced-app-2.0.32/advanced/data/teamwork/AI很费劲_需求文档(2213605_2210737_2210529).pdf">
+								<a href="http://127.0.0.1/yii-advanced-app-2.0.32/advanced/data/team/AI很费劲_需求文档(2213605_2210737_2210529).zip">
 									<span class="title">AI很费劲_需求文档</span>
 								</a>
 							</li>
 							<li>
-								<a href="http://127.0.0.1/yii-advanced-app-2.0.32/advanced/data/teamwork/AI很费劲_设计文档(2213605_2210737_2210529).pdf">
+								<a href="http://127.0.0.1/yii-advanced-app-2.0.32/advanced/data/team/AI很费劲_设计文档(2213605_2210737_2210529).zip">
 									<span class="title">AI很费劲_设计文档</span>
 								</a>
 							</li>
 							<li>
-								<a href="http://127.0.0.1/yii-advanced-app-2.0.32/advanced/data/teamwork/AI很费劲_实现文档(2213605_2210737_2210529).pdf">
+								<a href="http://127.0.0.1/yii-advanced-app-2.0.32/advanced/data/team/AI很费劲_实现文档(2213605_2210737_2210529).zip">
 									<span class="title">AI很费劲_实现文档</span>
 								</a>
 							</li>
 							<li>
-								<a href="http://127.0.0.1/yii-advanced-app-2.0.32/advanced/data/teamwork/AI很费劲_用户手册(2213605_2210737_2210529).pdf">
+								<a href="http://127.0.0.1/yii-advanced-app-2.0.32/advanced/data/team/AI很费劲_用户手册(2213605_2210737_2210529).zip">
 									<span class="title">AI很费劲_用户手册</span>
 								</a>
 							</li>
 							<li>
-								<a href="http://127.0.0.1/yii-advanced-app-2.0.32/advanced/data/teamwork/AI很费劲_部署文档(2213605_2210737_2210529).pdf">
+								<a href="http://127.0.0.1/yii-advanced-app-2.0.32/advanced/data/team/AI很费劲_部署文档(2213605_2210737_2210529).zip">
 									<span class="title">AI很费劲_部署文档</span>
 								</a>
 							</li>
 							<li>
-								<a href="http://127.0.0.1/yii-advanced-app-2.0.32/advanced/data/teamwork/AI很费劲_项目展示(2213605_2210737_2210529).pptx">
+								<a href="http://127.0.0.1/yii-advanced-app-2.0.32/advanced/data/team/AI很费劲_项目展示(2213605_2210737_2210529).zip">
 									<span class="title">AI很费劲_项目展示PPT</span>
 								</a>
 							</li>
@@ -112,17 +117,17 @@ use common\widgets\Alert;
 						</a>
 						<ul>
 						<li>
-								<a href="http://127.0.0.1/yii-advanced-app-2.0.32/advanced/data/personalwork/作业1(2210529_罗瑞).pdf">
+								<a href="http://127.0.0.1/yii-advanced-app-2.0.32/advanced/data/personal/作业1(2210529_罗瑞).zip">
 									<span class="title">罗瑞-2210529</span>
 								</a>
 							</li>
 							<li>
-								<a href="http://127.0.0.1/yii-advanced-app-2.0.32/advanced/data/personalwork/作业1(2210737_阿斯雅).pdf">
+								<a href="http://127.0.0.1/yii-advanced-app-2.0.32/advanced/data/personal/作业1(2210737_阿斯雅).zip">
 									<span class="title">阿斯雅-2210737</span>
 								</a>
 							</li>
 							<li>
-								<a href="http://127.0.0.1/yii-advanced-app-2.0.32/advanced/data/personalwork/作业1(2213605_刘忠旺).pdf">
+								<a href="http://127.0.0.1/yii-advanced-app-2.0.32/advanced/data/personal/作业1(2213605_刘忠旺).zip">
 									<span class="title">刘忠旺-2213605</span>
 								</a>
 							</li>
@@ -135,17 +140,17 @@ use common\widgets\Alert;
 						</a>
 						<ul>
 							<li>
-								<a href="http://127.0.0.1/yii-advanced-app-2.0.32/advanced/data/personalwork/作业2(2210529_罗瑞).pdf">
+								<a href="http://127.0.0.1/yii-advanced-app-2.0.32/advanced/data/personal/作业2(2210529_罗瑞).zip">
 									<span class="title">罗瑞-2210529</span>
 								</a>
 							</li>
 							<li>
-								<a href="http://127.0.0.1/yii-advanced-app-2.0.32/advanced/data/personalwork/作业2(2210737_阿斯雅).pdf">
+								<a href="http://127.0.0.1/yii-advanced-app-2.0.32/advanced/data/personal/作业2(2210737_阿斯雅).zip">
 									<span class="title">阿斯雅-2210737</span>
 								</a>
 							</li>
 							<li>
-								<a href="http://127.0.0.1/yii-advanced-app-2.0.32/advanced/data/personalwork/作业2(2213605_刘忠旺).pdf">
+								<a href="http://127.0.0.1/yii-advanced-app-2.0.32/advanced/data/personal/作业2(2213605_刘忠旺).zip">
 									<span class="title">刘忠旺-2213605</span>
 								</a>
 							</li>
@@ -158,17 +163,17 @@ use common\widgets\Alert;
 						</a>
 						<ul>
 						<li>
-								<a href="http://127.0.0.1/yii-advanced-app-2.0.32/advanced/data/personalwork/作业3(2210529_罗瑞).pdf">
+								<a href="http://127.0.0.1/yii-advanced-app-2.0.32/advanced/data/personal/作业3(2210529_罗瑞).zip">
 									<span class="title">罗瑞-2210529</span>
 								</a>
 							</li>
 							<li>
-								<a href="http://127.0.0.1/yii-advanced-app-2.0.32/advanced/data/personalwork/作业3(2210737_阿斯雅).pdf">
+								<a href="http://127.0.0.1/yii-advanced-app-2.0.32/advanced/data/personal/作业3(2210737_阿斯雅).zip">
 									<span class="title">阿斯雅-2210737</span>
 								</a>
 							</li>
 							<li>
-								<a href="http://127.0.0.1/yii-advanced-app-2.0.32/advanced/data/personalwork/作业3(2213605_刘忠旺).pdf">
+								<a href="http://127.0.0.1/yii-advanced-app-2.0.32/advanced/data/personal/作业3(2213605_刘忠旺).zip">
 									<span class="title">刘忠旺-2213605</span>
 								</a>
 							</li>
@@ -185,6 +190,13 @@ use common\widgets\Alert;
 						<a href="index.php?r=news">
 							<i class="linecons-star"></i>
 							<span class="title">新闻管理</span>
+						</a>
+					</li>
+
+					<li>
+						<a href="https://github.com/hhhhasy/DatabaseDevelopmentJob">
+							<i class="linecons-star"></i>
+							<span class="title">项目仓库</span>
 						</a>
 					</li>
 					

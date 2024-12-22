@@ -2,7 +2,12 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-
+/* 
+ * Team:AI很费劲
+ * Coding by 阿斯雅 2210737
+ * 2024/12/20
+ * 建议
+ */
 /* @var $this yii\web\View */
 /* @var $model frontend\models\Suggestions */
 /* @var $form yii\widgets\ActiveForm */

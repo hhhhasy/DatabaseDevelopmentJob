@@ -1,13 +1,15 @@
 <?php
 
 use yii\helpers\Html;
-
+/* 
+ * Team:AI很费劲
+ * Coding by 阿斯雅 2210737
+ * 2024/12/20
+ * 建议
+ */
 /* @var $this yii\web\View */
 /* @var $model frontend\models\Suggestions */
 
-$this->title = '提供建议';
-$this->params['breadcrumbs'][] = ['label' => '建议'];
-$this->params['breadcrumbs'][] = $this->title;
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -1,5 +1,10 @@
 <?php
-
+/* 
+ * Team:AI很费劲
+ * Coding by 刘忠旺 2213605
+ * 2024/12/10
+ * AI技术论坛
+ */
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */

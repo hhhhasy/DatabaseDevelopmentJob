@@ -1,5 +1,10 @@
 <?php
-
+/* 
+ * Team:AI很费劲
+ * Coding by 阿斯雅 2210737
+ * 2024/12/10
+ * AI工具
+ */
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */

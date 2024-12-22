@@ -1,7 +1,12 @@
 <?php
 
 use yii\helpers\Html;
-
+/* 
+ * Team:AI很费劲
+ * Coding by 罗瑞 2210529
+ * 2024/12/2
+ * 用户
+ */
 /* @var $this yii\web\View */
 /* @var $model frontend\models\User */
 

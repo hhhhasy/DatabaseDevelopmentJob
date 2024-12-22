@@ -1,5 +1,11 @@
 <?php
 /* @var $this yii\web\View */
+/* 
+ * Team:AI很费劲
+ * Coding by 阿斯雅 2210737
+ * 2024/12/17
+ * 首页
+ */
 $this->title = 'AI Innovation Platform';
 ?>
 

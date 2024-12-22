@@ -1,5 +1,10 @@
 <?php
-
+/* 
+ * Team:AI很费劲
+ * Coding by 刘忠旺 2213605
+ * 2024/12/15
+ * AI视频
+ */
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 

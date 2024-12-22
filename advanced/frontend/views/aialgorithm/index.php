@@ -1,5 +1,12 @@
 <?php
 use yii\helpers\Html;
+/* 
+ * Team:AI很费劲
+ * Coding by 罗瑞 2210529
+ * 2024/12/8
+ * AI算法
+ */
+
 /* @var $this yii\web\View */
 /* @var $searchModel frontend\models\Aialgorithmsearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */

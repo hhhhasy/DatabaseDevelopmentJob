@@ -3,8 +3,7 @@
 /* 
  * Team:AI很费劲
  * Coding by 刘忠旺 2213605
- *                   阿斯雅 2210737
- *                   罗瑞     2210529
+ *     
  *                   2024/12/19
  * @var $this yii\web\View        当前视图对象，提供视图相关的功能和信息
  * @var $form yii\bootstrap\ActiveForm  表单对象，管理表单的创建、校验和提交

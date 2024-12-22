@@ -1,5 +1,10 @@
 <?php
-
+/* 
+ * Team:AI很费劲
+ * Coding by 阿斯雅 2210737
+ * 2024/12/17
+ * 新闻管理
+ */
 use yii\helpers\Html;
 use yii\grid\GridView;
 

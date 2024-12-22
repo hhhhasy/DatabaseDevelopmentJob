@@ -2,7 +2,12 @@
 
 /* @var $this \yii\web\View */
 /* @var $content string */
-
+/* 
+ * Team:AI很费劲
+ * Coding by 阿斯雅 2210737
+ * 2024/12/10
+ * 整体布局
+ */
 use yii\helpers\Html;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;

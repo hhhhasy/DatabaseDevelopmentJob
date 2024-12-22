@@ -2,7 +2,12 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
-
+/* 
+ * Team:AI很费劲
+ * Coding by 阿斯雅 2210737
+ * 2024/12/20
+ * 建议
+ */
 /* @var $this yii\web\View */
 /* @var $searchModel frontend\models\Suggestionssrssearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
