@@ -1,5 +1,10 @@
 <?php
-
+/* 
+ * Team:AI很费劲
+ * Coding by 阿斯雅 2210737
+ * 2024/12/12
+ * AI工具控制类
+ */
 namespace frontend\controllers;
 
 use Yii;

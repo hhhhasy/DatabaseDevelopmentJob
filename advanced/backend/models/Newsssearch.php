@@ -1,5 +1,10 @@
 <?php
-
+/* 
+ * Team:AI很费劲
+ * Coding by 阿斯雅 2210737
+ * 2024/12/19
+ * 新闻搜索
+ */
 namespace backend\models;
 
 use yii\base\Model;

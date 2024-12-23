@@ -1,5 +1,10 @@
 <?php
-
+/* 
+ * Team:AI很费劲
+ * Coding by 罗瑞 2210529
+ * 2024/12/8
+ * AI算法模型
+ */
 namespace frontend\models;
 
 use Yii;
